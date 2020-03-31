@@ -1,0 +1,9 @@
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.deps.json
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.runtimeconfig.json
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.runtimeconfig.dev.json
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.dll
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.pdb
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.AssemblyInfoInputs.cache
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.AssemblyInfo.cs
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.dll
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.pdb

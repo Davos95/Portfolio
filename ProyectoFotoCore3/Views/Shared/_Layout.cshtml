@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoFotoCore3</title>
+    <link href="~/css/materialize.css" rel="stylesheet" />
+    <link href="~/css/application.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <main role="main" class="pb-3">
+        <header>
+            <ul id="dropdownPT" class="dropdown-content grey darken-4">
+                <li>@Html.ActionLink("Participantes", "Partners", "PartnerWork")</li>
+                <li>@Html.ActionLink("Trabajos", "Works", "PartnerWork")</li>
+            </ul>
+            <ul id="dropdownComision" class="dropdown-content grey darken-4">
+                <li>@Html.ActionLink("Gestionar Comisiones", "Comision", "Comision")</li>
+                <li>@Html.ActionLink("Resultados", "Comision", "Comision")</li>
+            </ul>
+            <ul id="dropdownSesion" class="dropdown-content grey darken-4">
+                <li>@Html.ActionLink("Ver Sesiones", "Sesion", "Session")</li>
+                <li>@Html.ActionLink("Crear Sesion", "CreateSesion", "Session")</li>
+
+            </ul>
+            <nav class="grey darken-4">
+                <div class="nav-wrapper">
+                    @Html.ActionLink("Picture Manager", "menu", "admin", new { }, new { @class = "brand-logo" })
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>@Html.ActionLink("Subir Fotos", "UploadImages", "Images")</li>
+                        <li><a a class="dropdown-trigger" href="#!" data-target="dropdownSesion">Sesiones</a></li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdownPT">Participantes y Trabajos<i class="material-icons right"></i></a></li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdownComision">Comisiones<i class="material-icons right"></i></a></li>
+                        @if (Context.User.Identity.IsAuthenticated)
+                        {
+                            <li>@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "login")</li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="page-footer grey darken-2">
+        <div class="container">
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Proyecto MCSD 2018 - 2019
+                <a asp-controller="Front" asp-action="Index" class="grey-text text-lighten-4 right">Sitio Web</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @*<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>*@
+    @*<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>*@
+
+    @*<script src="~/js/materialize.min.js"></script>*@
+    @*<script src="~/js/menuDropdown.js"></script>*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

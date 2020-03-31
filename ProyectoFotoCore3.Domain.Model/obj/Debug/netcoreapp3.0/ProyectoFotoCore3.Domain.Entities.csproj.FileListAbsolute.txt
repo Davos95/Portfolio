@@ -1,0 +1,13 @@
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.deps.json
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.dll
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.pdb
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.AssemblyInfoInputs.cache
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.AssemblyInfo.cs
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.dll
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.pdb
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.csprojAssemblyReference.cache
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\bin\Debug\netcoreapp3.0\Infraestructure.Utils.dll
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.dll
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\bin\Debug\netcoreapp3.0\Infraestructure.Utils.pdb
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\bin\Debug\netcoreapp3.0\ProyectoFotoCore3.Repository.Context.pdb
+G:\Proyectos\ProyectoFotoCore3\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.Entities.csproj.CopyComplete

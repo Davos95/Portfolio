@@ -1,0 +1,22 @@
+﻿body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.mg-ver-xl {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.mg-top-xl {
+    margin-top: 32px;
+}
+
+.mg-bottom-xl {
+    margin-bottom: 32px;
+}
