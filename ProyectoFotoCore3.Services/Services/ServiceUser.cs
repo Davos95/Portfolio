@@ -1,4 +1,4 @@
-﻿using ProyectoFotoCore3.Repository.Context;
+﻿using ProyectoFotoCore3.Data.Context;
 using ProyectoFotoCore3.Repository.Interfaces;
 using ProyectoFotoCore3.Services.Interfaces;
 using System;
@@ -7,19 +7,19 @@ using System.Text;
 
 namespace ProyectoFotoCore3.Services.Services
 {
-    public class ServiceUser : IServiceUser
+    public class ServiceUser : IServiceUsuario
     {
-        IRepositoryUser _repositoryUser;
-        public ServiceUser(IRepositoryUser repositoryUser)
+        IRepositoryUsuario _repositoryUsuario;
+        public ServiceUser(IRepositoryUsuario repositoryUser)
         {
-            _repositoryUser = repositoryUser;
+            _repositoryUsuario = repositoryUser;
         }
 
-        public Users GetElementById(int id)
+        public Usuario GetElementById(int id)
         {
             try
             {
-                var data = _repositoryUser.GetById(id);
+                var data = _repositoryUsuario.GetById(id);
                 return data;
             }
             catch(Exception ex)
@@ -28,11 +28,11 @@ namespace ProyectoFotoCore3.Services.Services
             }
         }
 
-        public Users Login(string nickname, string password)
+        public Usuario Login(string nickname, string password)
         {
             try
             {
-                var aux = _repositoryUser.GetByNickPassword(nickname, password);
+                var aux = _repositoryUsuario.GetByNickPassword(nickname, password);
                 return aux;
             }catch(Exception ex)
             {

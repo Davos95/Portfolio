@@ -10,11 +10,11 @@ namespace ProyectoFotoCore3.Controllers
 {
     public class LoginController : Controller
     {
-        //private readonly IServiceUser _serviceUser;
-        //public LoginController(IServiceUser serviceUser)
-        //{
-        //    _serviceUser = serviceUser;
-        //}
+        private readonly IServiceUsuario _serviceUsuario;
+        public LoginController(IServiceUsuario serviceUser)
+        {
+            _serviceUsuario = serviceUser;
+        }
 
         public IActionResult Index()
         {
@@ -26,12 +26,11 @@ namespace ProyectoFotoCore3.Controllers
         [HttpPost]
         public IActionResult Index(LoginVMO vmo)
         {
-            //var model = _serviceUser.Login(vmo.Nickname, vmo.Password);
-            //if (model != null)
-            //{
-
-            //    return RedirectToAction("Index", "Home");
-            //}
+            var model = _serviceUsuario.Login(vmo.Nickname, vmo.Password);
+            if (model != null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
             return Json(new { success = false });
         }

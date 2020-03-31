@@ -13,14 +13,14 @@ namespace ProyectoFotoCore3.CrossCutting.IoC.IoC
     {
         public static void RegisterServices(ContainerBuilder builder)
         {
-            //builder.RegisterType<ServiceUser>().As<IServiceUser>();
+            builder.RegisterType<ServiceUser>().As<IServiceUsuario>();
             //builder.RegisterType<ServiceParticipantes>().As<IServiceParticipantes>();
 
         }
 
         public static void RegisterRepositories(ContainerBuilder builder)
         {
-            //builder.RegisterType<RepositoryUser>().As<IRepositoryUser>();
+            builder.RegisterType<RepositoryUsuario>().As<IRepositoryUsuario>();
             //builder.RegisterType<RepositoryParticipantes>().As<IReposityParticipantes>();
         }
     }

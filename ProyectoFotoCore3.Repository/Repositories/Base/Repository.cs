@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProyectoFotoCore.Repository.Interfaces.Base;
-using ProyectoFotoCore3.Repository.Context;
+using ProyectoFotoCore3.Data.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +11,10 @@ namespace ProyectoFotoCore.Repository.Repositories.Base
     public abstract class Repository<T> : IRepository<T>
         where T : class
     {
-        private readonly PictureManagerContext _context;
+        private readonly PortfolioContext _context;
         internal DbSet<T> _dbSet;
 
-        public Repository(PictureManagerContext context)
+        public Repository(PortfolioContext context)
         {
             _context = context;
             _dbSet = _context.Set<T>();

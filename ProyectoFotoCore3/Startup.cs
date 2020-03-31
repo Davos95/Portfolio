@@ -13,7 +13,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProyectoFotoCore3.CrossCutting.IoC.IoC;
 using ProyectoFotoCore3.Data.Context;
-using ProyectoFotoCore3.Repository.Context;
 using ProyectoFotoCore3.Repository.Interfaces;
 using ProyectoFotoCore3.Repository.Repositories;
 using ProyectoFotoCore3.Services.Interfaces;

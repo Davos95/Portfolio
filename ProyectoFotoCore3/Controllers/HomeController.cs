@@ -13,8 +13,8 @@ namespace ProyectoFotoCore3.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IServiceUser _serviceUser;
-        public HomeController(ILogger<HomeController> logger, IServiceUser serviceUser)
+        private readonly IServiceUsuario _serviceUser;
+        public HomeController(ILogger<HomeController> logger, IServiceUsuario serviceUser)
         {
             _logger = logger;
             _serviceUser = serviceUser;
