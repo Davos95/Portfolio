@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using ProyectoFotoCore.Repository.Interfaces;
+using ProyectoFotoCore.Repository.Repositories;
 using ProyectoFotoCore3.Repository.Interfaces;
 using ProyectoFotoCore3.Repository.Repositories;
 using ProyectoFotoCore3.Services.Interfaces;
@@ -14,14 +16,14 @@ namespace ProyectoFotoCore3.CrossCutting.IoC.IoC
         public static void RegisterServices(ContainerBuilder builder)
         {
             builder.RegisterType<ServiceUser>().As<IServiceUsuario>();
-            //builder.RegisterType<ServiceParticipantes>().As<IServiceParticipantes>();
+            builder.RegisterType<ServiceApartado>().As<IServiceApartado>();
 
         }
 
         public static void RegisterRepositories(ContainerBuilder builder)
         {
             builder.RegisterType<RepositoryUsuario>().As<IRepositoryUsuario>();
-            //builder.RegisterType<RepositoryParticipantes>().As<IReposityParticipantes>();
+            builder.RegisterType<RepositoryApartado>().As<IRepositoryApartado>();
         }
     }
 }

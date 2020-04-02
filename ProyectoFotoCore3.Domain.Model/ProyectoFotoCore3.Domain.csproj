@@ -1,17 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>G:\Proyectos\ProyectoFotoCore3\Portfolio\Backup\ProyectoFotoCore3.Domain.Model\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Infraestructure.Utils\Infraestructure.Utils.csproj" />
     <ProjectReference Include="..\ProyectoFotoCore3.Repository.Model\ProyectoFotoCore3.Data.Context.csproj" />
   </ItemGroup>
-
 </Project>

@@ -289,3 +289,6 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.csproj.CopyComplete
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.csproj.CoreCompileInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.genruntimeconfig.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.0\Razor\Views\Apartado\Index.cshtml.g.cs

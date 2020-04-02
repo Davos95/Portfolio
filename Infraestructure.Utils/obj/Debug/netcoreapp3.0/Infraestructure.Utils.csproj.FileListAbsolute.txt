@@ -12,3 +12,5 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcore
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.0\Infraestructure.Utils.AssemblyInfo.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.0\Infraestructure.Utils.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.0\Infraestructure.Utils.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.0\Infraestructure.Utils.csprojAssemblyReference.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.0\Infraestructure.Utils.csproj.CoreCompileInputs.cache

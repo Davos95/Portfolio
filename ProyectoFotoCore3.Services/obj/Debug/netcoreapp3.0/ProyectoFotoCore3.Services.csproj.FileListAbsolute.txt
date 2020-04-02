@@ -32,3 +32,4 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\ne
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Services.csproj.CopyComplete
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Services.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Services.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Services.csproj.CoreCompileInputs.cache

@@ -6,34 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProyectoFotoCore3.Models;
+using ProyectoFotoCore3.Models.Entities.Home.Model;
 using ProyectoFotoCore3.Services.Interfaces;
 
 namespace ProyectoFotoCore3.Controllers
 {
     public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
+    {        
         private readonly IServiceUsuario _serviceUser;
-        public HomeController(ILogger<HomeController> logger, IServiceUsuario serviceUser)
+        private readonly IServiceApartado _serviceApartado;
+        public HomeController(IServiceUsuario serviceUser, IServiceApartado serviceApartado)
         {
-            _logger = logger;
             _serviceUser = serviceUser;
+            _serviceApartado = serviceApartado;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
+            var vmo = new HomeVMO();
+            vmo.Sections = _serviceApartado.GetNum();
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(vmo);
         }
 
         private void Lectura()

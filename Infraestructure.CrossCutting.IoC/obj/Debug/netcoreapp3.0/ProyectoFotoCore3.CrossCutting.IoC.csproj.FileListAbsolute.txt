@@ -36,3 +36,4 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\De
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.CrossCutting.IoC.csproj.CopyComplete
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.CrossCutting.IoC.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.CrossCutting.IoC.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.CrossCutting.IoC.csproj.CoreCompileInputs.cache

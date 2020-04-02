@@ -20,3 +20,4 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.0\ProyectoFotoCore.Repository.csproj.CopyComplete
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.0\ProyectoFotoCore.Repository.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.0\ProyectoFotoCore.Repository.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.0\ProyectoFotoCore.Repository.csproj.CoreCompileInputs.cache

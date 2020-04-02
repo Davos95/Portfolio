@@ -24,3 +24,4 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Domain.Model\obj\Debu
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.csproj.CopyComplete
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Domain.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Domain.csproj.CoreCompileInputs.cache

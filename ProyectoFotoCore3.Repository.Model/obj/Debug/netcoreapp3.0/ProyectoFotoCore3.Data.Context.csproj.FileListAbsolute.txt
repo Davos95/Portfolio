@@ -17,3 +17,5 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository.Model\obj\
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Data.Context.AssemblyInfo.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Data.Context.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Data.Context.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Data.Context.csproj.CoreCompileInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository.Model\obj\Debug\netcoreapp3.0\ProyectoFotoCore3.Data.Context.genruntimeconfig.cache

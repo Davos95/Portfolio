@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProyectoFotoCore3.Domain.Model\ProyectoFotoCore3.Domain.csproj" />
+    <ProjectReference Include="..\ProyectoFotoCore3.Repository\ProyectoFotoCore.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
