@@ -1,0 +1,57 @@
+﻿@using ProyectoFotoCore3.Models.Entities.Apartado.Model
+@using ProyectoFotoCore3.Models.Enum
+@model ApartadoVMO 
+
+@{
+    var controller = "Apartado";
+    var method = Model.StateView == StateViewEnum.Edicion ? "Edit" : "Create";
+}
+
+
+    <div class="modal" id="formularioApartado">
+        <div class="modal-content">
+            @if (method == "Create")
+            {
+                <span class="text-title">Crear Apartado</span>
+            }
+            else
+            {
+                <span class="text-title">Editar Apartado</span>
+            }
+            <form id="formulario">
+                <div class="input-field">
+                    @Html.TextBoxFor(x => x.Name, new { id = "Name" })
+                    <label for="Name">Nombre</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="descripcion" name="descripcion" class="materialize-textarea"></textarea>
+                    <label for="descripcion">Descripción</label>
+                </div>
+                <div class="input-field">
+                    @Html.TextBoxFor(x => x.Price, new { type = "number", id = "Price" })
+                    <label for="Price">Precio</label>
+                </div>
+            </form>
+            <button type="button" class="btn" id="enviar"> Enviar </button>
+        </div>
+    </div>
+
+<script>
+    $(document).ready(function () {
+        $(".modal").modal();
+        var Modalelem = document.querySelector('.modal');
+        var instance = M.Modal.init(Modalelem);
+        instance.open();
+
+        $("#enviar").click(async function () {
+            var json = $("#formulario").serializeArray();
+            var data = await SendForm("@controller/@method", "POST", json);
+            if (data.success) {
+                LoadPartial("tablaApartado", "@Url.Action("GetTabla","Apartado")", "GET", null);
+                M.toast({ html: 'Se ha creado correctamente', displayLength: '3000'})
+                instance.close();
+            }
+        });
+
+    });
+</script>

@@ -26,7 +26,7 @@ namespace ProyectoFotoCore3
         {
             var builder = new ConfigurationBuilder()
                                 .SetBasePath(env.ContentRootPath)
-                                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: false)
+                                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                                 .AddEnvironmentVariables();
             this.Configuration = builder.Build();
@@ -42,6 +42,7 @@ namespace ProyectoFotoCore3
            var cadenaConexion = Configuration.GetConnectionString("ConexionBBDD");
             services.AddDbContext<PortfolioContext>(options => options.UseSqlServer(cadenaConexion));
             services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddMvc();
         }
 

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Infraestructure.Utils/1.0.0": {
+        "runtime": {
+          "Infraestructure.Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Infraestructure.Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

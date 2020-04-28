@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hUGmc7I0vIqMHXRclVyL0kJ3oh17v7n0Ft8n20cj8732+CFhusZmrjE0gzTN0ap2DIuoLGgTC6c/xUaRZQeHjA==",
+  "dgSpecHash": "twWKbvkWjjmgvvC3x3PhVTUqWRrFzGDYwfcOzHxZeEKsYthRyCuGPimNoxWYOzueq1erp5KLxCM00H4A1pR/Cw==",
   "success": true,
   "projectFilePath": "G:\\Proyectos\\ProyectoFotoCore3\\Portfolio\\Infraestructure.Utils\\Infraestructure.Utils.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

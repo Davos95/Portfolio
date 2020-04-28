@@ -1,0 +1,22 @@
+﻿@using ProyectoFotoCore3.Models.Entities.Apartado.Model
+@model ApartadosVMO
+
+<table class="highlight striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var apartado in Model.Apartados)
+        {
+            <tr>
+                <td>@apartado.Name</td>
+                <td style="line-break:anywhere">@apartado.Descripcion</td>
+                <td>@apartado.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

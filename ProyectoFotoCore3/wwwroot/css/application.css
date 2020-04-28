@@ -37,6 +37,10 @@
 .text-align-rigth {
   text-align: right; }
 
+.text-title {
+  font-size: 32px;
+  font-weight: bold; }
+
 body {
   display: flex;
   min-height: 100vh;
@@ -54,3 +58,8 @@ main {
 
 .mg-bottom-xl {
   margin-bottom: 32px; }
+
+.container-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }

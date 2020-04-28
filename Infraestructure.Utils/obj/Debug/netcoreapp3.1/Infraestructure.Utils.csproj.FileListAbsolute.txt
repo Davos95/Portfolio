@@ -1,0 +1,8 @@
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\bin\Debug\netcoreapp3.1\Infraestructure.Utils.deps.json
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\bin\Debug\netcoreapp3.1\Infraestructure.Utils.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\bin\Debug\netcoreapp3.1\Infraestructure.Utils.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.1\Infraestructure.Utils.csproj.CoreCompileInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.1\Infraestructure.Utils.AssemblyInfoInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.1\Infraestructure.Utils.AssemblyInfo.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.1\Infraestructure.Utils.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.Utils\obj\Debug\netcoreapp3.1\Infraestructure.Utils.pdb

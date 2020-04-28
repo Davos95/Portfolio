@@ -52,19 +52,16 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Proyecto MCSD 2018 - 2019
                 <a asp-controller="Front" asp-action="Index" class="grey-text text-lighten-4 right">Sitio Web</a>
             </div>
         </div>
     </footer>
 
-    <script src="~/js/jquery-3.3.1.min.js"></script>
+    @*<script src="~/js/jquery-3.3.1.min.js"></script>*@
     <script src="~/lib/jquery/dist/jquery.js"></script>
-    @*<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>*@
-    @*<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>*@
 
-    @*<script src="~/js/materialize.min.js"></script>*@
-    @*<script src="~/js/menuDropdown.js"></script>*@
+    <script src="~/js/materialize.min.js"></script>
+    <script src="~/js/menuDropdown.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

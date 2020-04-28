@@ -1,19 +1,38 @@
-﻿@using ProyectoFotoCore3.Models.Entities.Apartado.Model
-@model ApartadosVMO
-
-<div class="row mg-top-xl">
-    <div class="col s12 m4 l3 xl2">
-        <button class="btn waves-effect waves-light green">Añadir</button>
+﻿<div class="row mg-top-xl">
+    <div class="col s12 container-flex ">
+        <div>
+            <span class="text-title">Apartados</span>
+        </div>
+        <div>
+            <button class="btn waves-effect waves-light green" id="btnAdd">Añadir</button>
+        </div>
+        
     </div>
 </div>
 
+<div id="modalApartado">
+
+</div>
 <div class="row">
-    <div class="col s12 m7 l9 xl8">
-        @foreach (var apartado in Model.Apartados)
-        {
-            <div>
-                @apartado.Name
-            </div>
-        }
+    <div id="tablaApartado" class="col s12 m7 l9 xl8">
+
+        
+
     </div>
 </div>
+
+@section Scripts{
+
+    <script src="~/js/Common/util.js"></script>-
+    <script>
+        $(document).ready(function () {
+            LoadPartial("tablaApartado", "@Url.Action("GetTabla","Apartado")", "GET", null);
+
+            $("#btnAdd").click(function () {
+                LoadPartial("modalApartado", "@Url.Action("Create","Apartado")", "GET", null);
+
+            });
+
+        });
+    </script>
+}

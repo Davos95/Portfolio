@@ -1,4 +1,5 @@
 ﻿using Infraestructure.Utils.Utils;
+using ProyectoFotoCore3.Models.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFotoCore3.Models.Entities.Apartado.Model
 {
-    public class ApartadoVMO
+    public class ApartadoVMO : VmoBase
     {
         [PropertyTarget(nameof(Data.Context.Apartado.Id))]
         public int Id { get; set; }

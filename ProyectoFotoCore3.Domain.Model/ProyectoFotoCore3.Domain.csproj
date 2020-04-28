@@ -1,6 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <FileUpgradeFlags>40</FileUpgradeFlags>
     <UpgradeBackupLocation>G:\Proyectos\ProyectoFotoCore3\Portfolio\Backup\ProyectoFotoCore3.Domain.Model\</UpgradeBackupLocation>
     <OldToolsVersion>2.0</OldToolsVersion>

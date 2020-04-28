@@ -1,0 +1,15 @@
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\bin\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.deps.json
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\bin\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.runtimeconfig.json
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\bin\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.runtimeconfig.dev.json
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\bin\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\bin\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.Data.Context.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.Data.Context.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.csprojAssemblyReference.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.csproj.CoreCompileInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.AssemblyInfoInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.AssemblyInfo.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.csproj.CopyComplete
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Repository\obj\Debug\netcoreapp3.1\ProyectoFotoCore.Repository.genruntimeconfig.cache
