@@ -19,12 +19,13 @@
                 <span class="text-title">Editar Apartado</span>
             }
             <form id="formulario">
+                <input type="hidden" name="id" value="@Model.Id" />
                 <div class="input-field">
                     @Html.TextBoxFor(x => x.Name, new { id = "Name" })
                     <label for="Name">Nombre</label>
                 </div>
                 <div class="input-field">
-                    <textarea id="descripcion" name="descripcion" class="materialize-textarea"></textarea>
+                    <textarea id="descripcion" name="descripcion" class="materialize-textarea">@Model.Descripcion</textarea>
                     <label for="descripcion">Descripción</label>
                 </div>
                 <div class="input-field">
@@ -42,13 +43,14 @@
         var Modalelem = document.querySelector('.modal');
         var instance = M.Modal.init(Modalelem);
         instance.open();
-
+        FormFocused("formulario");
         $("#enviar").click(async function () {
             var json = $("#formulario").serializeArray();
             var data = await SendForm("@controller/@method", "POST", json);
+
             if (data.success) {
                 LoadPartial("tablaApartado", "@Url.Action("GetTabla","Apartado")", "GET", null);
-                M.toast({ html: 'Se ha creado correctamente', displayLength: '3000'})
+                Toast(data.message);
                 instance.close();
             }
         });

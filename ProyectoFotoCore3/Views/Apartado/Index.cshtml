@@ -14,7 +14,7 @@
 
 </div>
 <div class="row">
-    <div id="tablaApartado" class="col s12 m7 l9 xl8">
+    <div id="tablaApartado" class="col s12">
 
         
 
@@ -34,5 +34,12 @@
             });
 
         });
+
+
+        async function DeleteApartado(id) {
+            var data = await SendForm("@Url.Action("Delete","Apartado")", "DELETE", { "id": id });
+            Toast(data.message);
+            LoadPartial("tablaApartado", "@Url.Action("GetTabla","Apartado")", "GET", null);
+        }
     </script>
 }

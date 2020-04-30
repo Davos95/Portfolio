@@ -31,3 +31,17 @@ function SendForm(url, method, data) {
         }
     });
 }
+
+function FormFocused(idForm) {
+    debugger;
+    var array = $("#" + idForm).serializeArray();
+    for (var i = 0; i < array.length; i++) {
+        $("[name='" + array[i].name+"']").focus();
+        $("[name='" + array[i].name + "']").blur();
+    }
+}
+
+
+function Toast(message) {
+    M.toast({ html: message, displayLength: '3000' });
+}
