@@ -12,27 +12,29 @@
 <body>
     <main role="main" class="pb-3">
         <header>
-            <ul id="dropdownPT" class="dropdown-content grey darken-4">
+            @*<ul id="dropdownPT" class="dropdown-content grey darken-4">
                 <li>@Html.ActionLink("Participantes", "Partners", "PartnerWork")</li>
                 <li>@Html.ActionLink("Trabajos", "Works", "PartnerWork")</li>
-            </ul>
-            <ul id="dropdownComision" class="dropdown-content grey darken-4">
+            </ul>*@
+            @*<ul id="dropdownComision" class="dropdown-content grey darken-4">
                 <li>@Html.ActionLink("Gestionar Comisiones", "Comision", "Comision")</li>
                 <li>@Html.ActionLink("Resultados", "Comision", "Comision")</li>
-            </ul>
-            <ul id="dropdownSesion" class="dropdown-content grey darken-4">
+            </ul>*@
+            @*<ul id="dropdownSesion" class="dropdown-content grey darken-4">
                 <li>@Html.ActionLink("Ver Sesiones", "Sesion", "Session")</li>
                 <li>@Html.ActionLink("Crear Sesion", "CreateSesion", "Session")</li>
 
-            </ul>
+            </ul>*@
             <nav class="grey darken-4">
                 <div class="nav-wrapper">
-                    @Html.ActionLink("Picture Manager", "menu", "admin", new { }, new { @class = "brand-logo" })
+                    @Html.ActionLink("ZaroPhoto", "index", "Home", new { }, new { @class = "brand-logo" })
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li>@Html.ActionLink("Subir Fotos", "UploadImages", "Images")</li>
-                        <li><a a class="dropdown-trigger" href="#!" data-target="dropdownSesion">Sesiones</a></li>
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdownPT">Participantes y Trabajos<i class="material-icons right"></i></a></li>
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdownComision">Comisiones<i class="material-icons right"></i></a></li>
+                        @*<li><a a class="dropdown-trigger" href="#!" data-target="dropdownSesion">Sesiones</a></li>*@
+                        <li>@Html.ActionLink("Sesiones", "Index", "Sesion")</li>
+                        <li>@Html.ActionLink("Apartados", "Index", "Apartado")</li>
+                        @*<li><a class="dropdown-trigger" href="#!" data-target="dropdownPT">Participantes y Trabajos<i class="material-icons right"></i></a></li>*@
+                        @*<li><a class="dropdown-trigger" href="#!" data-target="dropdownComision">Comisiones<i class="material-icons right"></i></a></li>*@
                         @if (Context.User.Identity.IsAuthenticated)
                         {
                             <li>@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "login")</li>

@@ -1,6 +1,6 @@
 ﻿@using ProyectoFotoCore3.Models.Entities.Apartado.Model
 @using ProyectoFotoCore3.Models.Enum
-@model ApartadoVMO 
+@model ApartadoVMO
 
 @{
     var controller = "Apartado";
@@ -8,34 +8,34 @@
 }
 
 
-    <div class="modal" id="formularioApartado">
-        <div class="modal-content">
-            @if (method == "Create")
-            {
-                <span class="text-title">Crear Apartado</span>
-            }
-            else
-            {
-                <span class="text-title">Editar Apartado</span>
-            }
-            <form id="formulario">
-                <input type="hidden" name="id" value="@Model.Id" />
-                <div class="input-field">
-                    @Html.TextBoxFor(x => x.Name, new { id = "Name" })
-                    <label for="Name">Nombre</label>
-                </div>
-                <div class="input-field">
-                    <textarea id="descripcion" name="descripcion" class="materialize-textarea">@Model.Descripcion</textarea>
-                    <label for="descripcion">Descripción</label>
-                </div>
-                <div class="input-field">
-                    @Html.TextBoxFor(x => x.Price, new { type = "number", id = "Price" })
-                    <label for="Price">Precio</label>
-                </div>
-            </form>
-            <button type="button" class="btn" id="enviar"> Enviar </button>
-        </div>
+<div class="modal" id="formularioApartado">
+    <div class="modal-content">
+        @if (method == "Create")
+        {
+            <span class="text-title">Crear Apartado</span>
+        }
+        else
+        {
+            <span class="text-title">Editar Apartado</span>
+        }
+        <form id="formulario">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <div class="input-field">
+                @Html.TextBoxFor(x => x.Name, new { id = "Name" })
+                <label for="Name">Nombre</label>
+            </div>
+            <div class="input-field">
+                <textarea id="descripcion" name="descripcion" class="materialize-textarea">@Model.Descripcion</textarea>
+                <label for="descripcion">Descripción</label>
+            </div>
+            <div class="input-field">
+                @Html.TextBoxFor(x => x.Price, new { type = "number", id = "Price" })
+                <label for="Price">Precio</label>
+            </div>
+        </form>
+        <button type="button" class="btn" id="enviar"> Enviar </button>
     </div>
+</div>
 
 <script>
     $(document).ready(function () {

@@ -1,0 +1,30 @@
+﻿<div class="row mg-top-xl">
+    <div class="col s12 container-flex ">
+        <div>
+            <span class="text-title">Sesiones</span>
+        </div>
+        <div>
+            <button class="btn waves-effect waves-light green" id="btnAdd">Añadir</button>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalSesion">
+
+</div>
+
+
+
+@section Scripts{
+
+    <script src="~/js/Common/util.js"></script>-
+    <script>
+        $(document).ready(function () {
+            $("#btnAdd").click(function () {
+                LoadPartial("modalSesion", "@Url.Action("Create","Sesion")", "GET", null);
+            });
+        });
+
+    </script>
+}

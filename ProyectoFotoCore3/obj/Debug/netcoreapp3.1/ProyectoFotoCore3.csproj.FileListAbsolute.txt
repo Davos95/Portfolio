@@ -419,6 +419,7 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.RazorCoreGenerate.cache
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Apartado\Index.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Apartado\_ModalApartado.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Apartado\_TablaApartado.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
@@ -436,4 +437,5 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.pdb
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.genruntimeconfig.cache
-G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Apartado\_TablaApartado.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\Index.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\_ModalSesion.cshtml.g.cs

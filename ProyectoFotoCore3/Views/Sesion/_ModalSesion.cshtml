@@ -1,0 +1,79 @@
+﻿@using ProyectoFotoCore3.Models.Entities.Sesion.Model
+@using ProyectoFotoCore3.Models.Enum
+@model SesionVMO
+
+@{
+    var controller = "Sesion";
+    var method = Model.StateView == StateViewEnum.Edicion ? "Edit" : "Create";
+}
+
+
+<div class="modal" id="formularioSesion">
+    <div class="modal-content">
+        <form id="formulario">
+            <div style="display:flex; flex-direction:row; justify-content:space-between;">
+                <div>
+                    @if (method == "Create")
+                    {
+                        <span class="text-title">Crear Sesión</span>
+                    }
+                    else
+                    {
+                        <span class="text-title">Editar Sesión</span>
+                    }
+                </div>
+
+                <div class="switch">
+                    <label>
+                        Colaboración
+                        @Html.CheckBoxFor(x => x.Colaboracion)
+                        <span class="lever"></span>
+                    </label>
+                </div>
+            </div>
+            <input type="hidden" name="id" value="@Model.Id" />
+
+            <div class="input-field">
+                @Html.TextBoxFor(x => x.Nombre, new { id = "Name" })
+                <label for="Name">Nombre</label>
+            </div>
+
+            <div class="input-field">
+                <textarea id="descripcion" name="descripcion" class="materialize-textarea">@Model.Descripcion</textarea>
+                <label for="descripcion">Descripción</label>
+            </div>
+
+            <div class="input-field">
+                @Html.DropDownListFor(x => x.IdApartado, Model.Apartados, "Selecciona una opción", new { id = "Apartado" })
+                <label for="Apartado">Apartado</label>
+            </div>
+
+        </form>
+        <button type="button" class="btn" id="enviar"> Enviar </button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".modal").modal();
+        $('select').formSelect();
+        var Modalelem = document.querySelector('.modal');
+        var instance = M.Modal.init(Modalelem);
+        instance.open();
+        FormFocused("formulario");
+
+        $("#enviar").click(async function () {
+            var json = $("#formulario").serializeArray();
+            var data = await SendForm("@controller/@method", "POST", json);
+
+            if (data.success) {
+                @*LoadPartial("tablaApartado", "@Url.Action("GetTabla","Apartado")", "GET", null);*@
+                Toast(data.message);
+                instance.close();
+            }
+        });
+
+
+    });
+
+</script>

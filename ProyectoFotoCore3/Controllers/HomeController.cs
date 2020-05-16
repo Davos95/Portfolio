@@ -15,23 +15,21 @@ namespace ProyectoFotoCore3.Controllers
     {        
         private readonly IServiceUsuario _serviceUser;
         private readonly IServiceApartado _serviceApartado;
-        public HomeController(IServiceUsuario serviceUser, IServiceApartado serviceApartado)
+        private readonly IServiceSesion _serviceSesion;
+        public HomeController(IServiceUsuario serviceUser, IServiceApartado serviceApartado, IServiceSesion serviceSesion)
         {
             _serviceUser = serviceUser;
             _serviceApartado = serviceApartado;
+            _serviceSesion = serviceSesion;
         }
 
         public IActionResult Index()
         {
             var vmo = new HomeVMO();
             vmo.Sections = _serviceApartado.GetNum();
+            vmo.Sessions = _serviceSesion.GetNum();
 
             return View(vmo);
-        }
-
-        private void Lectura()
-        {
-            var model = _serviceUser.GetElementById(1);    
         }
 
     }
