@@ -9,7 +9,7 @@ namespace ProyectoFotoCore.Repository.Interfaces
     public interface IRepositorySesion : IRepository<Sesion>
     {
         Sesion GetById(int id);
-
+        IEnumerable<Sesion> GetByIdApartado(int idApartado);
         int GetNum();
     }
 }

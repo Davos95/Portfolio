@@ -9,6 +9,7 @@ namespace ProyectoFotoCore3.Services.Interfaces
     {
         Sesion GetElementById(int id);
         List<Sesion> GetElements();
+        List<Sesion> GetElementsByIdApartado(int idApartado);
         void AddElement(Sesion element);
         void UpdateElement(Sesion element);
         void DeleteElement(int id);

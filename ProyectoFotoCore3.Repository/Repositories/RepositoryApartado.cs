@@ -3,6 +3,7 @@ using ProyectoFotoCore.Repository.Repositories.Base;
 using ProyectoFotoCore3.Data.Context;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 
@@ -14,7 +15,8 @@ namespace ProyectoFotoCore.Repository.Repositories
 
         public Apartado GetById(int id)
         {
-            var data = _dbSet.FirstOrDefault(x => x.Id == id);
+            var data = _dbSet
+                .FirstOrDefault(x => x.Id == id);
 
             return data;
         }

@@ -439,3 +439,4 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.genruntimeconfig.cache
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\Index.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\_ModalSesion.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\_Sessions.cshtml.g.cs

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
+using ProyectoFotoCore3.Data.Context;
 using ProyectoFotoCore3.Models.Entities.Apartado.Adapter;
 using ProyectoFotoCore3.Models.Entities.Apartado.Model;
 using ProyectoFotoCore3.Services.Interfaces;
@@ -13,10 +14,11 @@ namespace ProyectoFotoCore3.Controllers
     public class ApartadoController : Controller
     {
         private readonly IServiceApartado _serviceApartado;
-
-        public ApartadoController(IServiceApartado serviceApartado)
+        private readonly IServiceSesion _serviceSesion;
+        public ApartadoController(IServiceApartado serviceApartado, IServiceSesion serviceSesion)
         {
             _serviceApartado = serviceApartado;
+            _serviceSesion = serviceSesion;
         }
 
         public IActionResult Index()
@@ -80,8 +82,8 @@ namespace ProyectoFotoCore3.Controllers
         {
             try
             {
-                var model = _serviceApartado.GetElementById(id);
-                if (model.Sesion.Any())
+                var sesions = _serviceSesion.GetElementsByIdApartado(id);
+                if (sesions.Any())
                 {
                     return Json(new { success = true, message = "No se puede eliminar, hay sesiones que pertenecen a este apartado." });
                 }

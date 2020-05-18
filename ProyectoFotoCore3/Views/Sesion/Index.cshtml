@@ -14,6 +14,9 @@
 
 </div>
 
+<div id="Sesiones">
+
+</div>
 
 
 @section Scripts{
@@ -21,6 +24,10 @@
     <script src="~/js/Common/util.js"></script>-
     <script>
         $(document).ready(function () {
+
+
+            LoadPartial("Sesiones", "@Url.Action("GetSesions","Sesion")", "GET", null);
+
             $("#btnAdd").click(function () {
                 LoadPartial("modalSesion", "@Url.Action("Create","Sesion")", "GET", null);
             });

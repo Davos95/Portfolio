@@ -30,8 +30,9 @@ namespace ProyectoFotoCore3.Controllers
 
         public IActionResult GetSesions()
         {
-            var vmo = _serviceSesion.GetElements().ToList();
-            return PartialView("_Sesions", vmo);
+            var vmo = SesionAdapter.ConvertList(_serviceSesion.GetElements().ToList());
+
+            return PartialView("_Sessions", vmo);
         }
 
 
@@ -61,6 +62,39 @@ namespace ProyectoFotoCore3.Controllers
             }
         }
 
+        public IActionResult Edit(int id)
+        {
+            try
+            {
+                var model = _serviceSesion.GetElementById(id);
+                var vmo = SesionAdapter.Convert(model);
+                vmo.StateView = Models.Enum.StateViewEnum.Edicion;
+                vmo.Apartados = _serviceApartado.GetElements().Select(x => new SelectListItem() { Text = x.Nombre, Value = x.Id.ToString() });
+
+                return PartialView("_ModalSesion", vmo);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Edit(SesionVMO vmo)
+        {
+            try
+            {
+                var model = _serviceSesion.GetElementById(vmo.Id);
+                model = SesionAdapter.ConvertToModel(vmo, model);
+                _serviceSesion.UpdateElement(model);
+
+                return Json(new { success = true, message = "Se ha editado correctamente" });
+            }
+            catch(Exception ex)
+            {
+                return Json(new { success = true, message = "Ha ocurrido un error." });
+            }
+        }
 
     }
 }

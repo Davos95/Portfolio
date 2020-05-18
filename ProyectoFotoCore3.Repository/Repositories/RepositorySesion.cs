@@ -17,6 +17,11 @@ namespace ProyectoFotoCore.Repository.Repositories
             return _dbSet.FirstOrDefault(x => x.Id == id);
         }
 
+        public IEnumerable<Sesion> GetByIdApartado(int idApartado)
+        {
+            return _dbSet.Where(x => x.IdApartado == idApartado);
+        }
+
         public int GetNum()
         {
             return _dbSet.ToList().Count();

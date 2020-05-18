@@ -67,7 +67,7 @@
             var data = await SendForm("@controller/@method", "POST", json);
 
             if (data.success) {
-                @*LoadPartial("tablaApartado", "@Url.Action("GetTabla","Apartado")", "GET", null);*@
+                LoadPartial("Sesiones", "@Url.Action("GetSesions","Sesion")", "GET", null);
                 Toast(data.message);
                 instance.close();
             }

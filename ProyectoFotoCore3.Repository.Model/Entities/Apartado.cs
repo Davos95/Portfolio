@@ -15,6 +15,6 @@ namespace ProyectoFotoCore3.Data.Context
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
 
-        public virtual ICollection<Sesion> Sesion { get; set; }
+        public ICollection<Sesion> Sesion { get; set; }
     }
 }

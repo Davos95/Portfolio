@@ -15,11 +15,11 @@ namespace ProyectoFotoCore3.Data.Context
         {
         }
 
-        public virtual DbSet<Apartado> Apartado { get; set; }
-        public virtual DbSet<Foto> Foto { get; set; }
-        public virtual DbSet<Sesion> Sesion { get; set; }
-        public virtual DbSet<SobreMi> SobreMi { get; set; }
-        public virtual DbSet<Usuario> Usuario { get; set; }
+        public  DbSet<Apartado> Apartado { get; set; }
+        public  DbSet<Foto> Foto { get; set; }
+        public  DbSet<Sesion> Sesion { get; set; }
+        public  DbSet<SobreMi> SobreMi { get; set; }
+        public  DbSet<Usuario> Usuario { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

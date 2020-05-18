@@ -38,6 +38,11 @@ namespace ProyectoFotoCore3.Services.Services
             return _repositorySesion.GetAll().ToList();
         }
 
+        public List<Sesion> GetElementsByIdApartado(int idApartado)
+        {
+            return _repositorySesion.GetByIdApartado(idApartado).ToList();
+        }
+
         public int GetNum()
         {
             return _repositorySesion.GetNum();
