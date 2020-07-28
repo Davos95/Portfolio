@@ -1,0 +1,176 @@
+﻿@using ProyectoFotoCore3.Models.Entities.Sesion.Model
+@model SesionVMO
+
+@{
+    ViewData["Title"] = "Fotos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .grid-item {
+        width: 250px;
+    }
+</style>
+<div style="display:flex; justify-content:space-between;">
+    <div>
+        <h2>@Model.Nombre</h2>
+    </div>
+    <div>
+        <button class="btn waves-effect waves-darken green" id="order">Ordenar</button>
+    </div>
+</div>
+<input type="hidden" id="IdSesion" value="@Model.Id" />
+<div class="row" style="padding: 1rem 1.2rem;">
+    <div class="col s12">
+        <div class="grid">
+            @if (Model.Fotos.Any())
+            {
+                @foreach (var foto in Model.Fotos)
+                {
+                    <div class="grid-item">
+                        <div class="image-card" id="@foto.Id">
+                            <div class="image-card-content">
+                                <img class="image-card-img" src="@foto.UriAzure" />
+                                <div class="foto-card-menu">
+                                    <div class="icon-container width-50">
+                                        @if (Model.IdFotoPreview.HasValue && Model.IdFotoPreview.Value == foto.Id)
+                                        {
+                                            <i id="preview_@foto.Id" class="material-icons icon-white">star</i>
+                                        }
+                                        else
+                                        {
+                                            <i id="preview_@foto.Id" class="material-icons icon-white">star_border</i>
+                                        }
+                                        <i class="material-icons icon-white">check_box_outline_blank</i>
+                                        <i class="material-icons icon-red">favorite_border</i>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <h1>No hay fotos en esta sesión.</h1>
+                <h2>Intenta subir unas cuantas.</h2>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<!-- The Modal -->
+<div id="modalPreview" class="modal-Preview">
+    <span class="close">&times;</span>
+    <img class="modal-content-Preview" id="imagePreview">
+    <div id="caption"></div>
+</div>
+
+@section Scripts{
+    <script src="~/js/Common/util.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var $grid = $('.grid').masonry({
+                // options...
+                itemSelector: '.grid-item',
+                columnWidth: 250
+            });
+            $grid.imagesLoaded().progress(function () {
+                $grid.masonry('layout');
+            });
+
+
+
+            var origen;
+            var flagImg = true;
+            $(".image-card").on("dragover", function (e) {
+                e.preventDefault();
+                //Recogemos el id del origen
+                if (flagImg) {
+                    origen = $(this).attr('id');
+                    flagImg = false;
+                }
+            }).on("drop", function (e) {
+                e.preventDefault();
+                var destino = $(this).attr('id');
+
+                console.log(origen);
+                console.log(destino);
+
+                /*Intercambio de imagenes*/
+                var origenImg = $("#" + origen + " img").attr('src');
+                var destinoImg = $("#" + destino + " img").attr('src');
+
+                $("#" + origen + " img").attr('src', destinoImg);
+                $("#" + destino + " img").attr('src', origenImg);
+
+
+                /* Intercambio de Ids */
+                var origenIdImg = $("#" + origen).attr('id');
+                var destinoIdImg = $("#" + destino).attr('id');
+
+                $("#" + origen).attr('id', destinoIdImg);
+                $("#" + destino).attr('id', origenIdImg);
+
+                $grid.masonry('layout');
+
+                flagImg = true;
+            });
+
+
+
+            $("#order").click(async function () {
+                var array = new Array();
+
+                $(".image-card").each(function () {
+                    array.push($(this).attr("id"));
+                });
+                var idSesion = $("#IdSesion").val();
+
+                var formData = new FormData();
+                formData.append("IdFotos", array);
+                formData.append("IdSesion", idSesion);
+                console.log(array);
+                var response = await $.ajax({
+                    url: "@Url.Action("Ordenar","Foto")",
+                    type: "POST",
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    success: function (response) {
+                        alert("Success");
+                    }
+                });
+
+            });
+
+
+
+            $("[id^='preview_']").click(async function () {
+
+                var completeId = $(this).attr("id");
+                var id = completeId.split("_")[1];
+
+                var bool = await PreviewPhoto(id);
+                if (bool) {
+                    $("[id^='preview_']").text('star_border');
+                    $(this).text('star');
+                }
+
+            });
+
+        });
+
+        async function PreviewPhoto(id) {
+            var json = { "id": id };
+            var bool = await SendForm("@Url.Action("PreviewImage", "Foto")", "GET", json);
+            return bool;
+
+        }
+    </script>
+
+}

@@ -1,80 +1,95 @@
 ﻿@using ProyectoFotoCore3.Models.Entities.Home.Model
 @model HomeVMO
-    <div class="row mg-top-xl">
-        <div class="col s12 m9 l8 xl5">
-            <div class="card">
-                <div class="card-content" style="display:flex; text-align:center;">
-                    <div style="flex:auto">
-                        <div style="margin-bottom: 16px;">
-                            <span style="font-size:18px;">Fotos</span>
-                        </div>
-                        <div>
-                            <buttom type="buttom" class="btn waves blue lighten-1">Subir fotos</buttom>
-                        </div>
+<div class="row mg-top-xl">
+    <div class="col s12 m9 l8 xl5">
+        <div class="card">
+            <div class="card-content" style="display:flex; text-align:center;">
+                <div style="flex:auto">
+                    <div style="margin-bottom: 16px;">
+                        <span style="font-size:18px;">Fotos</span>
                     </div>
-                    <div style="flex:auto; border-left: 1px solid;">
-                        <div>
-                            <span style="font-size:18px;">Fotos subidas</span>
-                        </div>
-                        <div>
-                            <span style="font-size:38px;">
-                                @Model.Photos
-                            </span>
-                        </div>
+                    <div>
+                        <buttom type="buttom" onclick="LoadPartial('modalUploadFotos', '@Url.Action("UploadModal","Foto")', 'GET');" class="btn waves blue lighten-1">Subir fotos</buttom>
                     </div>
-                    @*<a href="@Url.Action("Index","Participantes")" class="card-menu-title" id="btnParticipantes">Participantes</a>*@
                 </div>
+                <div style="flex:auto; border-left: 1px solid;">
+                    <div>
+                        <span style="font-size:18px;">Fotos subidas</span>
+                    </div>
+                    <div>
+                        <span id="numFotos" style="font-size:38px;">
+                            @Model.Photos
+                        </span>
+                    </div>
+                </div>
+                @*<a href="@Url.Action("Index","Participantes")" class="card-menu-title" id="btnParticipantes">Participantes</a>*@
             </div>
         </div>
-        <div class="col s12 m9 l8 xl5">
-            <div class="card">
-                <div class="card-content" style="display:flex; text-align:center;">
-                    <div style="flex:auto">
-                        <div style="margin-bottom: 16px;">
-                            <span style="font-size:18px;">Sesiones</span>
-                        </div>
-                        <div>
-                            <a href="@Url.Action("Index","Sesion")" class="btn waves-effect waves-light blue lighten-1">Gestionar</a>
-                        </div>
+    </div>
+    <div class="col s12 m9 l8 xl5">
+        <div class="card">
+            <div class="card-content" style="display:flex; text-align:center;">
+                <div style="flex:auto">
+                    <div style="margin-bottom: 16px;">
+                        <span style="font-size:18px;">Sesiones</span>
                     </div>
-                    <div style="flex:auto; border-left: 1px solid;">
-                        <div>
-                            <span style="font-size:18px;">Sesiones creadas</span>
-                        </div>
-                        <div>
-                            <span style="font-size:38px;">
-                                @Model.Sessions
-                            </span>
-                        </div>
+                    <div>
+                        <a href="@Url.Action("Index","Sesion")" class="btn waves-effect waves-light blue lighten-1">Gestionar</a>
                     </div>
-                    @*<a href="@Url.Action("Index","Participantes")" class="card-menu-title" id="btnParticipantes">Participantes</a>*@
                 </div>
+                <div style="flex:auto; border-left: 1px solid;">
+                    <div>
+                        <span style="font-size:18px;">Sesiones creadas</span>
+                    </div>
+                    <div>
+                        <span style="font-size:38px;">
+                            @Model.Sessions
+                        </span>
+                    </div>
+                </div>
+                @*<a href="@Url.Action("Index","Participantes")" class="card-menu-title" id="btnParticipantes">Participantes</a>*@
             </div>
         </div>
+    </div>
 
-        <div class="col s12 m9 l8 xl5">
-            <div class="card">
-                <div class="card-content" style="display:flex; text-align:center;">
-                    <div style="flex:auto">
-                        <div style="margin-bottom: 16px;">
-                            <span style="font-size:18px;">Apartados</span>
-                        </div>
-                        <div>
-                            <a href="@Url.Action("Index","Apartado")" class="btn waves-effect waves-light blue lighten-1">Gestionar</a>
-                        </div>
+    <div class="col s12 m9 l8 xl5">
+        <div class="card">
+            <div class="card-content" style="display:flex; text-align:center;">
+                <div style="flex:auto">
+                    <div style="margin-bottom: 16px;">
+                        <span style="font-size:18px;">Apartados</span>
                     </div>
-                    <div style="flex:auto; border-left: 1px solid;">
-                        <div>
-                            <span style="font-size:18px;">Apartados creados</span>
-                        </div>
-                        <div>
-                            <span style="font-size:38px;">
-                                @Model.Sections
-                            </span>
-                        </div>
+                    <div>
+                        <a href="@Url.Action("Index","Apartado")" class="btn waves-effect waves-light blue lighten-1">Gestionar</a>
+                    </div>
+                </div>
+                <div style="flex:auto; border-left: 1px solid;">
+                    <div>
+                        <span style="font-size:18px;">Apartados creados</span>
+                    </div>
+                    <div>
+                        <span style="font-size:38px;">
+                            @Model.Sections
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
+<div id="modalUploadFotos">
+
+</div>
+
+@section Scripts {
+
+    <script src="~/js/Common/util.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+
+        });
+    </script>
+}

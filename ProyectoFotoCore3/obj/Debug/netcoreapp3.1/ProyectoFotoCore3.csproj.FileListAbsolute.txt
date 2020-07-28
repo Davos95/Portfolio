@@ -43,7 +43,6 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
-G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
@@ -127,7 +126,6 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.DataAnnotations.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.dll
-G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Primitives.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.JSInterop.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\Microsoft.Net.Http.Headers.dll
@@ -185,7 +183,6 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
-G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
@@ -440,3 +437,14 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\Index.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\_ModalSesion.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\_Sessions.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\Microsoft.Azure.KeyVault.Core.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Blob.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Common.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\UploadImages.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Foto\_ModalUpload.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\Fotos.cshtml.g.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.pdb

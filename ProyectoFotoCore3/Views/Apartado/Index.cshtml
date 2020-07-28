@@ -1,29 +1,6 @@
-﻿<div class="row mg-top-xl">
-    <div class="col s12 container-flex ">
-        <div>
-            <span class="text-title">Apartados</span>
-        </div>
-        <div>
-            <button class="btn waves-effect waves-light green" id="btnAdd">Añadir</button>
-        </div>
-        
-    </div>
-</div>
+﻿@section Scripts{
 
-<div id="modalApartado">
-
-</div>
-<div class="row">
-    <div id="tablaApartado" class="col s12">
-
-        
-
-    </div>
-</div>
-
-@section Scripts{
-
-    <script src="~/js/Common/util.js"></script>-
+    <script src="~/js/Common/util.js"></script>
     <script>
         $(document).ready(function () {
             LoadPartial("tablaApartado", "@Url.Action("GetTabla","Apartado")", "GET", null);
@@ -43,3 +20,29 @@
         }
     </script>
 }
+
+
+<div class="row mg-top-xl">
+    <div class="col s12 container-flex ">
+        <div>
+            <span class="text-title">Apartados</span>
+        </div>
+        <div>
+            <button class="btn waves-effect waves-light green" id="btnAdd">Añadir</button>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalApartado">
+
+</div>
+<div class="row">
+    <div id="tablaApartado" class="col s12">
+
+
+
+    </div>
+</div>
+
+

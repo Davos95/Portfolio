@@ -1,0 +1,100 @@
+﻿@using ProyectoFotoCore3.Models.Entities.Foto.Model
+@model UploadFotoVMO
+
+@section styles {
+
+    <link href="~/css/styleUploadImages.css" rel="stylesheet" />
+}
+@section events {
+    <script>
+        $(document).ready(function () {
+            M.AutoInit();
+        });
+    </script>
+}
+<div class="modal" id="formularioUploadFotos">
+    <div class="row">
+        <div class="col s12 m12 l12 xl12 ">
+            <form action="Foto/Upload" enctype="multipart/form-data" onsubmit="AJAXSubmit(this);return false;" method="post">
+                <div class="card">
+                    <div class="card-content">
+                        <div id="wrapper">
+                            <div id="drop-area">
+                                <h3 class="drop-text">Arrastra las imagenes aqui</h3>
+                                <h5 class="text">Tambien puedes dar <label style="color: blue;font-size:20px;">click<input type="file" id="files" name="files" multiple hidden /></label> para abrir el explorador de archivos</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="loading" class="progress" style="display:none">
+                    <div class="indeterminate"></div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="input-field">
+                            @Html.DropDownListFor(x => x.IdSesion, Model.Sesiones, "Selecciona una opción")
+
+                            <label for="IdSesion">Selecciona una Sesion</label>
+                        </div>
+                        <button id="Senform" type="submit" class="btn waves-effect waves-darken green" value="Upload">Enviar</button>
+
+                        <output name="result"></output>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </form>
+            <div style="display:none" id="divLink">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".modal").modal();
+        $('select').formSelect();
+        var Modalelem = document.querySelector('.modal');
+        var instance = M.Modal.init(Modalelem);
+        instance.open();
+    });
+
+
+    async function AJAXSubmit(oFormElement) {
+        debugger;
+        var resultElement = oFormElement.elements.namedItem("result");
+        const formData = new FormData(oFormElement);
+
+        try {
+            const response = await fetch(oFormElement.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                debugger;
+                var num = await SendForm("@Url.Action("GetNumPhotos", "Foto")", "GET");
+                $("#numFotos").text(num);
+                $(".modal").modal("close");        
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+
+
+</script>
+<script src="~/js/scriptUploadImages.js"></script>
+
+@*<select name="sesion" id="sesion">
+        <option value="null" selected disabled>Selecciona una opción</option>
+        @if (Model != null)
+        {
+            foreach (  s in Model.)
+            {
+                <option value="@s.Id">@s.Name</option>
+            }
+        }
+    </select>*@

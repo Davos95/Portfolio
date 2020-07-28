@@ -24,6 +24,59 @@
           "buildTransitive/netcoreapp3.0/EntityFramework.targets": {}
         }
       },
+      "Microsoft.AspNetCore.Http.Features/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.1.4",
+          "System.IO.Pipelines": "4.7.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll": {}
+        }
+      },
+      "Microsoft.Azure.KeyVault.Core/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll": {}
+        }
+      },
+      "Microsoft.Azure.Storage.Blob/11.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.Storage.Common": "11.2.0",
+          "NETStandard.Library": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        }
+      },
+      "Microsoft.Azure.Storage.Common/11.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.KeyVault.Core": "2.0.4",
+          "NETStandard.Library": "2.0.1",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -239,13 +292,13 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.0.0": {
+      "Microsoft.Extensions.Primitives/3.1.4": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         }
       },
       "Microsoft.Identity.Client/3.0.8": {
@@ -705,6 +758,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.IO.Pipelines/4.7.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -1216,7 +1278,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.2": {
@@ -1347,6 +1409,10 @@
       "Infraestructure.Utils/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "3.1.4",
+          "Microsoft.Azure.Storage.Blob": "11.1.5"
+        },
         "compile": {
           "bin/placeholder/Infraestructure.Utils.dll": {}
         },
@@ -1401,6 +1467,19 @@
         },
         "runtime": {
           "bin/placeholder/ProyectoFotoCore3.Domain.dll": {}
+        }
+      },
+      "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Azure.Storage.Blob": "11.2.0"
+        },
+        "compile": {
+          "bin/placeholder/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll": {}
         }
       }
     }
@@ -1460,6 +1539,70 @@
         "tools/netcoreapp3.0/any/ef6.dll",
         "tools/netcoreapp3.0/any/ef6.pdb",
         "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/3.1.4": {
+      "sha512": "HroyqnPK+g/GF+W3oLFQ2CfKS7BO/vzKhcgRAz3bovf3F/c3vR5Qw8AJEi0c+UVxyIhbFp00CdNR53Ghj+qckA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.3.1.4.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
+      ]
+    },
+    "Microsoft.Azure.KeyVault.Core/2.0.4": {
+      "sha512": "BSdPbmZ1BvptdfgECniezEwfQLAyT11MsOm4btXdswjIm8BkLK9eX//yO8ExlafErJg1tAKpCxfNyLTHSlXJvA==",
+      "type": "package",
+      "path": "microsoft.azure.keyvault.core/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Azure.KeyVault.Core.dll",
+        "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll",
+        "microsoft.azure.keyvault.core.2.0.4.nupkg.sha512",
+        "microsoft.azure.keyvault.core.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Storage.Blob/11.2.0": {
+      "sha512": "Ys5em7RM2eERv5fYi56w8tQDcVWfXNtMxJAmcKn4SQwGJF2PKHTw1RM1WVPwwfmyhFxDuZqHcjwZ6S2L/yXE1w==",
+      "type": "package",
+      "path": "microsoft.azure.storage.blob/11.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.Storage.Blob.dll",
+        "lib/net452/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.xml",
+        "microsoft.azure.storage.blob.11.2.0.nupkg.sha512",
+        "microsoft.azure.storage.blob.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Storage.Common/11.2.0": {
+      "sha512": "PhCccoKdUOLPDLGI1B98aQD5fT9mGUehgoDh64bYvJis8B+vcyGZdGv9wEXa52KVEMDIfPT91R9eRMQr8BGJ0w==",
+      "type": "package",
+      "path": "microsoft.azure.storage.common/11.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.Storage.Common.dll",
+        "lib/net452/Microsoft.Azure.Storage.Common.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Common.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Common.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Common.xml",
+        "microsoft.azure.storage.common.11.2.0.nupkg.sha512",
+        "microsoft.azure.storage.common.nuspec"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -1786,18 +1929,19 @@
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/3.0.0": {
-      "sha512": "6gwewTbmOh+ZVBicVkL1XRp79sx4O7BVY6Yy+7OYZdwn3pyOKe9lOam+3gXJ3TZMjhJZdV0Ub8hxHt2vkrmN5Q==",
+    "Microsoft.Extensions.Primitives/3.1.4": {
+      "sha512": "tLR9n5ltwA56nr1t5M6q5IBfGLXtMS+XgumtqVENmtPQOWUD+m0Kgo1U6GWr06Y875WUN3sOGnmqkvW4an7fYA==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/3.0.0",
+      "path": "microsoft.extensions.primitives/3.1.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.xml",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.3.1.4.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -3190,6 +3334,30 @@
         "ref/xamarinwatchos10/_._",
         "system.io.filesystem.primitives.4.3.0.nupkg.sha512",
         "system.io.filesystem.primitives.nuspec"
+      ]
+    },
+    "System.IO.Pipelines/4.7.1": {
+      "sha512": "TyMTasnXQt7U4k13RQ7tA3CrfWEkvWjR635SFfnKVwwMOgClLE5mdHSkG2D13BLIdNwbPTGVQnhQB8Rk7f53Rg==",
+      "type": "package",
+      "path": "system.io.pipelines/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
+        "lib/netstandard1.3/System.IO.Pipelines.dll",
+        "lib/netstandard1.3/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
+        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.4.7.1.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Linq/4.3.0": {
@@ -5310,12 +5478,18 @@
       "type": "project",
       "path": "../ProyectoFotoCore3.Domain.Model/ProyectoFotoCore3.Domain.csproj",
       "msbuildProject": "../ProyectoFotoCore3.Domain.Model/ProyectoFotoCore3.Domain.csproj"
+    },
+    "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/1.0.0": {
+      "type": "project",
+      "path": "../ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj",
+      "msbuildProject": "../ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "ProyectoFotoCore.Repository >= 1.0.0",
-      "ProyectoFotoCore3.Domain >= 1.0.0"
+      "ProyectoFotoCore3.Domain >= 1.0.0",
+      "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5356,6 +5530,9 @@
             },
             "G:\\Proyectos\\ProyectoFotoCore3\\Portfolio\\ProyectoFotoCore3.Repository\\ProyectoFotoCore.Repository.csproj": {
               "projectPath": "G:\\Proyectos\\ProyectoFotoCore3\\Portfolio\\ProyectoFotoCore3.Repository\\ProyectoFotoCore.Repository.csproj"
+            },
+            "G:\\Proyectos\\ProyectoFotoCore3\\Portfolio\\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj": {
+              "projectPath": "G:\\Proyectos\\ProyectoFotoCore3\\Portfolio\\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj"
             }
           }
         }

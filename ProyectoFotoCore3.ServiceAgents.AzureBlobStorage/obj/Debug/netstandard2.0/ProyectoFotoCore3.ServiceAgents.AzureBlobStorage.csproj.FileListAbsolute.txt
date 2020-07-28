@@ -1,0 +1,9 @@
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\bin\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.deps.json
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\bin\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\obj\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csprojAssemblyReference.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\obj\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.AssemblyInfoInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\obj\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.AssemblyInfo.cs
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\bin\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\obj\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj.CoreCompileInputs.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\obj\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\obj\Debug\netstandard2.0\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.pdb

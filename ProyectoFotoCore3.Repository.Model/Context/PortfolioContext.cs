@@ -15,18 +15,18 @@ namespace ProyectoFotoCore3.Data.Context
         {
         }
 
-        public  DbSet<Apartado> Apartado { get; set; }
-        public  DbSet<Foto> Foto { get; set; }
-        public  DbSet<Sesion> Sesion { get; set; }
-        public  DbSet<SobreMi> SobreMi { get; set; }
-        public  DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Apartado> Apartado { get; set; }
+        public virtual DbSet<Foto> Foto { get; set; }
+        public virtual DbSet<Sesion> Sesion { get; set; }
+        public virtual DbSet<SobreMi> SobreMi { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                optionsBuilder.UseSqlServer("Data Source=DESKTOP-885Q0CE\\SQLEXPRESS01;User=sa;Password=admin123;Initial Catalog=Portfolio");
+//                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS01;Initial Catalog=Portfolio;User ID=sa;Password=admin123");
             }
         }
 
@@ -69,6 +69,11 @@ namespace ProyectoFotoCore3.Data.Context
                     .HasForeignKey(d => d.IdApartado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Sesion_Apartado");
+
+                entity.HasOne(d => d.IdFotoPreviewNavigation)
+                    .WithMany(p => p.Sesion)
+                    .HasForeignKey(d => d.IdFotoPreview)
+                    .HasConstraintName("FK_Sesion_Foto");
             });
 
             modelBuilder.Entity<SobreMi>(entity =>

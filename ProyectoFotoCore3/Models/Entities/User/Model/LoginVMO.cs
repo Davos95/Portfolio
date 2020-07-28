@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ProyectoFotoCore3.Domain.Entities;
 using ProyectoFotoCore3.Data.Context;
 
 namespace ProyectoFotoCore3.Models.Entities.User.Model

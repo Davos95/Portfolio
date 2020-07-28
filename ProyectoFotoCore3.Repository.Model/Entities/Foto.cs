@@ -5,6 +5,11 @@ namespace ProyectoFotoCore3.Data.Context
 {
     public partial class Foto
     {
+        public Foto()
+        {
+            Sesion = new HashSet<Sesion>();
+        }
+
         public int Id { get; set; }
         public int IdSesion { get; set; }
         public string UriAzure { get; set; }
@@ -13,5 +18,6 @@ namespace ProyectoFotoCore3.Data.Context
         public int? OrdenPrincipal { get; set; }
 
         public virtual Sesion IdSesionNavigation { get; set; }
+        public virtual ICollection<Sesion> Sesion { get; set; }
     }
 }

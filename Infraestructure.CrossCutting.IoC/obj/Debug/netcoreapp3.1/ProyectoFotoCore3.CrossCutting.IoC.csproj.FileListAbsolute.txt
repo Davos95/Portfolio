@@ -21,3 +21,5 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\De
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.CrossCutting.IoC.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.CrossCutting.IoC.pdb
 G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.CrossCutting.IoC.genruntimeconfig.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\Infraestructure.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.pdb

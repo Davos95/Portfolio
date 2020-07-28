@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ProyectoFotoCore3.Models.Base;
 using ProyectoFotoCore3.Models.Entities.Apartado.Model;
+using ProyectoFotoCore3.Models.Entities.Foto.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -30,7 +31,14 @@ namespace ProyectoFotoCore3.Models.Entities.Sesion.Model
         [Required]
         public int IdApartado { get; set; }
 
+        [PropertyTarget(nameof(Data.Context.Sesion.IdFotoPreview))]
+        public int? IdFotoPreview { get; set; }
+
+        public string UrlFoto { get; set; }
+
         public IEnumerable<SelectListItem> Apartados { get; set; }
+
+        public List<FotoVMO> Fotos { get; set; }
 
     }
 }

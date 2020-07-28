@@ -9,7 +9,7 @@ using System.Text;
 
 namespace ProyectoFotoCore.Repository.Repositories
 {
-    public class RepositoryApartado : Repository<Apartado> ,IRepositoryApartado
+    public class RepositoryApartado : Repository<Apartado>, IRepositoryApartado
     {
         public RepositoryApartado(PortfolioContext context): base(context) { }
 

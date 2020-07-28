@@ -29,7 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoFotoCore3.Services"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.Utils", "Infraestructure.Utils\Infraestructure.Utils.csproj", "{F9682DB3-D4A5-4AA5-A296-23CD638271F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFotoCore3.CrossCutting.IoC", "Infraestructure.CrossCutting.IoC\ProyectoFotoCore3.CrossCutting.IoC.csproj", "{50960D36-C719-4D94-8BCD-01264904A048}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoFotoCore3.CrossCutting.IoC", "Infraestructure.CrossCutting.IoC\ProyectoFotoCore3.CrossCutting.IoC.csproj", "{50960D36-C719-4D94-8BCD-01264904A048}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.5 ServiceAgents", "3.5 ServiceAgents", "{023C26F0-27F2-4D18-B644-7A4F673087FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage", "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj", "{C93820E2-6C70-4365-B09D-9CFF26512E42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,10 @@ Global
 		{50960D36-C719-4D94-8BCD-01264904A048}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50960D36-C719-4D94-8BCD-01264904A048}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50960D36-C719-4D94-8BCD-01264904A048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C93820E2-6C70-4365-B09D-9CFF26512E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C93820E2-6C70-4365-B09D-9CFF26512E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C93820E2-6C70-4365-B09D-9CFF26512E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C93820E2-6C70-4365-B09D-9CFF26512E42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +89,8 @@ Global
 		{BFB9E29C-EFAC-49A0-AAF9-BA2B73FFAE8B} = {33CE9C84-4ED7-435B-A635-5D1A65FF31FF}
 		{F9682DB3-D4A5-4AA5-A296-23CD638271F1} = {27A24648-6A43-4F3E-8F5B-3E07A908F3DB}
 		{50960D36-C719-4D94-8BCD-01264904A048} = {18460765-B45E-4928-9A68-8489803A833A}
+		{023C26F0-27F2-4D18-B644-7A4F673087FB} = {D2B3FF35-2F43-44C8-BF18-AFD92840A411}
+		{C93820E2-6C70-4365-B09D-9CFF26512E42} = {023C26F0-27F2-4D18-B644-7A4F673087FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B93DEA4-856E-415B-AA4E-2CA51EB1A9A8}

@@ -11,5 +11,7 @@ namespace ProyectoFotoCore.Repository.Interfaces
         Sesion GetById(int id);
         IEnumerable<Sesion> GetByIdApartado(int idApartado);
         int GetNum();
+
+
     }
 }

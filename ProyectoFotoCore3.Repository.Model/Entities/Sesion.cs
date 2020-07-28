@@ -15,8 +15,10 @@ namespace ProyectoFotoCore3.Data.Context
         public string Descripcion { get; set; }
         public int IdApartado { get; set; }
         public bool Colaboracion { get; set; }
+        public int? IdFotoPreview { get; set; }
 
         public virtual Apartado IdApartadoNavigation { get; set; }
+        public virtual Foto IdFotoPreviewNavigation { get; set; }
         public virtual ICollection<Foto> Foto { get; set; }
     }
 }

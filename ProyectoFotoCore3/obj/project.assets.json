@@ -198,16 +198,17 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "Microsoft.AspNetCore.Http.Features/3.1.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "2.2.0"
+          "Microsoft.Extensions.Primitives": "3.1.4",
+          "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
@@ -367,6 +368,46 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
+        }
+      },
+      "Microsoft.Azure.KeyVault.Core/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll": {}
+        }
+      },
+      "Microsoft.Azure.Storage.Blob/11.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.Storage.Common": "11.2.0",
+          "NETStandard.Library": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        }
+      },
+      "Microsoft.Azure.Storage.Common/11.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.KeyVault.Core": "2.0.4",
+          "NETStandard.Library": "2.0.1",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.Analyzers/2.9.4": {
@@ -913,13 +954,13 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.0.0": {
+      "Microsoft.Extensions.Primitives/3.1.4": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         }
       },
       "Microsoft.Identity.Client/3.0.8": {
@@ -985,11 +1026,11 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
@@ -998,7 +1039,7 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
@@ -1010,11 +1051,11 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.3",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -1024,10 +1065,10 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.2"
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.3"
         },
         "compile": {
           "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
@@ -1036,10 +1077,10 @@
           "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
@@ -1048,14 +1089,14 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "3.1.0",
           "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
           "Microsoft.CodeAnalysis.CSharp": "3.3.1",
           "Microsoft.CodeAnalysis.Razor": "3.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
@@ -1064,11 +1105,11 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.3",
           "Newtonsoft.Json": "11.0.2",
           "NuGet.Frameworks": "4.7.0"
         },
@@ -1079,10 +1120,10 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.2": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
@@ -1954,6 +1995,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.IO.Pipelines/4.7.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -2987,6 +3037,10 @@
       "Infraestructure.Utils/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "3.1.4",
+          "Microsoft.Azure.Storage.Blob": "11.1.5"
+        },
         "compile": {
           "bin/placeholder/Infraestructure.Utils.dll": {}
         },
@@ -3057,12 +3111,26 @@
           "bin/placeholder/ProyectoFotoCore3.Domain.dll": {}
         }
       },
+      "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Azure.Storage.Blob": "11.2.0"
+        },
+        "compile": {
+          "bin/placeholder/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll": {}
+        }
+      },
       "ProyectoFotoCore3.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "ProyectoFotoCore.Repository": "1.0.0",
-          "ProyectoFotoCore3.Domain": "1.0.0"
+          "ProyectoFotoCore3.Domain": "1.0.0",
+          "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ProyectoFotoCore3.Services.dll": {}
@@ -3338,16 +3406,20 @@
         "microsoft.aspnetcore.http.extensions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/2.2.0": {
-      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+    "Microsoft.AspNetCore.Http.Features/3.1.4": {
+      "sha512": "HroyqnPK+g/GF+W3oLFQ2CfKS7BO/vzKhcgRAz3bovf3F/c3vR5Qw8AJEi0c+UVxyIhbFp00CdNR53Ghj+qckA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "path": "microsoft.aspnetcore.http.features/3.1.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.3.1.4.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
@@ -3499,6 +3571,53 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
         "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.Azure.KeyVault.Core/2.0.4": {
+      "sha512": "BSdPbmZ1BvptdfgECniezEwfQLAyT11MsOm4btXdswjIm8BkLK9eX//yO8ExlafErJg1tAKpCxfNyLTHSlXJvA==",
+      "type": "package",
+      "path": "microsoft.azure.keyvault.core/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Azure.KeyVault.Core.dll",
+        "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll",
+        "microsoft.azure.keyvault.core.2.0.4.nupkg.sha512",
+        "microsoft.azure.keyvault.core.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Storage.Blob/11.2.0": {
+      "sha512": "Ys5em7RM2eERv5fYi56w8tQDcVWfXNtMxJAmcKn4SQwGJF2PKHTw1RM1WVPwwfmyhFxDuZqHcjwZ6S2L/yXE1w==",
+      "type": "package",
+      "path": "microsoft.azure.storage.blob/11.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.Storage.Blob.dll",
+        "lib/net452/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.xml",
+        "microsoft.azure.storage.blob.11.2.0.nupkg.sha512",
+        "microsoft.azure.storage.blob.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Storage.Common/11.2.0": {
+      "sha512": "PhCccoKdUOLPDLGI1B98aQD5fT9mGUehgoDh64bYvJis8B+vcyGZdGv9wEXa52KVEMDIfPT91R9eRMQr8BGJ0w==",
+      "type": "package",
+      "path": "microsoft.azure.storage.common/11.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.Storage.Common.dll",
+        "lib/net452/Microsoft.Azure.Storage.Common.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Common.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Common.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Common.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Common.xml",
+        "microsoft.azure.storage.common.11.2.0.nupkg.sha512",
+        "microsoft.azure.storage.common.nuspec"
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/2.9.4": {
@@ -4139,18 +4258,19 @@
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/3.0.0": {
-      "sha512": "6gwewTbmOh+ZVBicVkL1XRp79sx4O7BVY6Yy+7OYZdwn3pyOKe9lOam+3gXJ3TZMjhJZdV0Ub8hxHt2vkrmN5Q==",
+    "Microsoft.Extensions.Primitives/3.1.4": {
+      "sha512": "tLR9n5ltwA56nr1t5M6q5IBfGLXtMS+XgumtqVENmtPQOWUD+m0Kgo1U6GWr06Y875WUN3sOGnmqkvW4an7fYA==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/3.0.0",
+      "path": "microsoft.extensions.primitives/3.1.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.xml",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.3.1.4.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -4265,52 +4385,52 @@
         "runtime.json"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2": {
-      "sha512": "u8J1qrqqlUGbKmhQ3igS8/3OUTnxoDO39noeVesVPDOxnYC5JE3GNiAJC9iHnXX+kI0PfO57jizOBf76DmgPBA==",
+    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.3": {
+      "sha512": "17orw41YWWt91nWrStbfwKv/BbnRXx68sZuQqgTCSWIOUME24Q9URF2kGXN08Zr1JND4VTkrTFFh2N/z7WbHQg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration/3.1.2",
+      "path": "microsoft.visualstudio.web.codegeneration/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
-        "microsoft.visualstudio.web.codegeneration.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.2": {
-      "sha512": "sLT4NR70rmIXKkTjgOmSCEttXvfEk7xQsRl1AC783CYQwuYBQKmnGwdlIsP0Ltq5m96NWP95vowJWdyVpqkIiA==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.3": {
+      "sha512": "l9HI8o1fjeSxIMs1QEETdNjEUCxbWxOgl7v9Zrjf4gVanXv/nQWOR9hLypSWHol7IThCcT5lc3lEtsOKlvTtOg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.2",
+      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.xml",
-        "microsoft.visualstudio.web.codegeneration.contracts.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.contracts.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.contracts.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.2": {
-      "sha512": "aM+L4Zn5p+aqUz6nR6F6nxcF8Vk0WHN3FVNlABwdiaqlAavFtlAgXjE5CyN49gD0JDT448GwRH6wS4pme3jGuA==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.3": {
+      "sha512": "clZ0yhrlc5VZ/qvz+XSOFa/JK4EUk0rFJ26kb/DGT4ZNCx1speB45veFLcmeCG3B/d/XMIlYAPDNhHvyHCJcXg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.2",
+      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
-        "microsoft.visualstudio.web.codegeneration.core.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.core.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.core.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.2": {
-      "sha512": "cXphrOlxlxxHnliO+IqeXi+nW86xFbnD8e+26qELx21LYE3Rw0NGvk9seKMMvWOyUsgGoQNAx8Yoo7rpj6Cptw==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.3": {
+      "sha512": "N4obD7ldPaX7EHMVQoFHO5bX3zJI6HGkJpwKMuZ0LiGMb/d7ku39H7erXocAsSQbxTs1GCCQx8IbhkAc6a5hEw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.2",
+      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4318,7 +4438,7 @@
         "lib/net461/dotnet-aspnet-codegenerator-design.xml",
         "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll",
         "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.xml",
-        "microsoft.visualstudio.web.codegeneration.design.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.design.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.design.nuspec",
         "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.exe",
         "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.xml",
@@ -4330,10 +4450,10 @@
         "runtimes/win7-x86/lib/net461/dotnet-aspnet-codegenerator-design.xml"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.2": {
-      "sha512": "hXvUY8zlngVbUulP4vpGHneA42qWiRN4zZg+tz/ruzP31imXglw2e3vZ5BJcXPCtXuqweax1fykvHIkYTcQnGg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.3": {
+      "sha512": "q2nOAgelxO/Ceg+MOWtmx9bXV+QHRhE3m3Xg1RSn1dzN/MNnORE4O8jEaXPlw6Rv0kuv97bPU1ALgXd0X2O/jw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.2",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4341,42 +4461,42 @@
         "Templates/DbContext/NewLocalDbContext.cshtml",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
-        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.2": {
-      "sha512": "+WXbODG8fMzHovZUa5TBGEn3smlUgqEDkGgct8A4R090su3Rjmzz2B3iMKfK1Nl3jO16V04QPSf5r0RFVsp2vw==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.3": {
+      "sha512": "KwQkLdsPz/kVSXluIbg9dr1QnO3uI77MAxIADIJz27hNe1VArqpEbW5VkIioMguxLIMjHS6t2yoySTgp7q2D/A==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.2",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
-        "microsoft.visualstudio.web.codegeneration.templating.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.templating.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.templating.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.2": {
-      "sha512": "rVYCT5kF1NJumCCKx3imnWJSMaGNetXor196QJ7LQ9KfeswgM7KXGV6VdrB0wgV0cMjoK6enhCX4JsM/QOk0xw==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.3": {
+      "sha512": "7J8k3dljc4Ii4R73DBrMO2VCp3k/WNASyNvJ1YdVl3Z/HSvN/fpQRBG/L8qVhkI1ad52jZ6nAeShJt/y9IGRyg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.2",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
-        "microsoft.visualstudio.web.codegeneration.utils.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.utils.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.utils.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.2": {
-      "sha512": "tciDJICNnfCPtMXRIm+eQNxx3FdDqQ8aae7iAJt+6FXK0m3vNgQl62kXwr5PQgJGa4HRR5gxKSAObKuLIQ4EOw==",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.3": {
+      "sha512": "ZCgChp0HElZrjWgMC0HH80iJZyVqymjaJsXVpgcyQ88sczqqD4ei1NJa/tnE3O2zTZ2xqqoe9may4LkhJugxiA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.2",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4673,7 +4793,7 @@
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.xml",
         "lib/netstandard2.0/bootstrap3_identitygeneratorfilesconfig.json",
         "lib/netstandard2.0/bootstrap4_identitygeneratorfilesconfig.json",
-        "microsoft.visualstudio.web.codegenerators.mvc.3.1.2.nupkg.sha512",
+        "microsoft.visualstudio.web.codegenerators.mvc.3.1.3.nupkg.sha512",
         "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
@@ -6606,6 +6726,30 @@
         "ref/xamarinwatchos10/_._",
         "system.io.filesystem.primitives.4.3.0.nupkg.sha512",
         "system.io.filesystem.primitives.nuspec"
+      ]
+    },
+    "System.IO.Pipelines/4.7.1": {
+      "sha512": "TyMTasnXQt7U4k13RQ7tA3CrfWEkvWjR635SFfnKVwwMOgClLE5mdHSkG2D13BLIdNwbPTGVQnhQB8Rk7f53Rg==",
+      "type": "package",
+      "path": "system.io.pipelines/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
+        "lib/netstandard1.3/System.IO.Pipelines.dll",
+        "lib/netstandard1.3/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
+        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.4.7.1.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Linq/4.3.0": {
@@ -9423,6 +9567,11 @@
       "path": "../ProyectoFotoCore3.Domain.Model/ProyectoFotoCore3.Domain.csproj",
       "msbuildProject": "../ProyectoFotoCore3.Domain.Model/ProyectoFotoCore3.Domain.csproj"
     },
+    "ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/1.0.0": {
+      "type": "project",
+      "path": "../ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj",
+      "msbuildProject": "../ProyectoFotoCore3.ServiceAgents.AzureBlobStorage/ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.csproj"
+    },
     "ProyectoFotoCore3.Services/1.0.0": {
       "type": "project",
       "path": "../ProyectoFotoCore3.Services/ProyectoFotoCore3.Services.csproj",
@@ -9438,7 +9587,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0",
       "Microsoft.Extensions.Logging.Debug >= 3.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.2",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
       "Microsoft.jQuery.Unobtrusive.Ajax >= 3.2.6",
       "Microsoft.jQuery.Unobtrusive.Validation >= 3.2.11",
       "Newtonsoft.Json >= 12.0.2",
@@ -9539,7 +9688,7 @@
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[3.1.2, )"
+            "version": "[3.1.3, )"
           },
           "Microsoft.jQuery.Unobtrusive.Ajax": {
             "target": "Package",

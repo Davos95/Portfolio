@@ -19,3 +19,5 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\ne
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.Services.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.Services.pdb
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\obj\Debug\netcoreapp3.1\ProyectoFotoCore3.Services.genruntimeconfig.cache
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3.Services\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.pdb

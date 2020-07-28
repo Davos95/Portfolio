@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Autofac.Core;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ProyectoFotoCore3.Models.Entities.Apartado.Adapter;
+using ProyectoFotoCore3.Models.Entities.Foto.Adapter;
 using ProyectoFotoCore3.Models.Entities.Sesion.Adapter;
 using ProyectoFotoCore3.Models.Entities.Sesion.Model;
 using ProyectoFotoCore3.Services.Interfaces;
@@ -16,10 +18,13 @@ namespace ProyectoFotoCore3.Controllers
     {
         private readonly IServiceSesion _serviceSesion;
         private readonly IServiceApartado _serviceApartado;
-        public SesionController(IServiceSesion serviceSesion, IServiceApartado serviceApartado)
+        private readonly IServiceFoto _serviceFoto;
+
+        public SesionController(IServiceSesion serviceSesion, IServiceApartado serviceApartado, IServiceFoto serviceFoto)
         {
             _serviceSesion = serviceSesion;
             _serviceApartado = serviceApartado;
+            _serviceFoto = serviceFoto;
         }
 
         public IActionResult Index()
@@ -27,15 +32,19 @@ namespace ProyectoFotoCore3.Controllers
             return View();
         }
 
-
         public IActionResult GetSesions()
         {
             var vmo = SesionAdapter.ConvertList(_serviceSesion.GetElements().ToList());
+            foreach (var sesion in vmo)
+            {
+                if(sesion.IdFotoPreview.HasValue)
+                {
+                    sesion.UrlFoto = _serviceFoto.GetElementById(sesion.IdFotoPreview.Value).UriAzure;
+                }
+            }
 
             return PartialView("_Sessions", vmo);
         }
-
-
         public IActionResult Create()
         {
             var vmo = new SesionVMO();
@@ -44,7 +53,6 @@ namespace ProyectoFotoCore3.Controllers
 
             return PartialView("_ModalSesion", vmo);
         }
-
 
         [HttpPost]
         public IActionResult Create(SesionVMO vmo)
@@ -77,7 +85,7 @@ namespace ProyectoFotoCore3.Controllers
             {
                 throw ex;
             }
-        }
+        } 
 
         [HttpPost]
         public IActionResult Edit(SesionVMO vmo)
@@ -94,6 +102,16 @@ namespace ProyectoFotoCore3.Controllers
             {
                 return Json(new { success = true, message = "Ha ocurrido un error." });
             }
+        }
+
+
+        public IActionResult Fotos(int id)
+        { 
+            var model = _serviceSesion.GetElementById(id);
+            var vmo = SesionAdapter.Convert(model);
+            vmo.Fotos = FotoAdapter.ConvertList(_serviceFoto.GetElementsByIdSesion(id));
+
+            return View(vmo);
         }
 
     }

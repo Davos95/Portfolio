@@ -9,12 +9,19 @@
         <div class="col s3">
             <div class="image-card">
                 <div class="image-card-content">
-                    <img class="image-card-img" src="~/images/default_image.jpg" />
+                    @if (string.IsNullOrEmpty(sesion.UrlFoto))
+                    {
+                        <img class="image-card-img" src="~/images/default_image.jpg" />
+                    }
+                    else
+                    {
+                        <img class="image-card-img" src="@sesion.UrlFoto" />
+                    }
                     <div class="image-card-menu">
                         <label class="text-menu">@sesion.Nombre</label>
                         <div class="icon-container">
                             <i onclick="LoadPartial('modalSesion', '@Url.Action("Edit","Sesion")', 'GET', {'id': @sesion.Id});" class="material-icons icon">create <span class="icon-text">Editar sesión</span></i>
-                            <a href="@Url.Action("Gestionar","Sesion")" class="material-icons icon">camera_roll <span class="icon-text">Editar fotos</span></a>
+                            <a href="@Url.Action("Fotos","Sesion", new {id = sesion.Id })" class="material-icons icon">camera_roll <span class="icon-text">Editar fotos</span></a>
                         </div>
                     </div>
                 </div>
