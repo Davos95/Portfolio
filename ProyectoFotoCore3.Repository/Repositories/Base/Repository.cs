@@ -36,6 +36,8 @@ namespace ProyectoFotoCore.Repository.Repositories.Base
 
         public virtual void DeleteElement(T entity, bool saveChanges = true)
         {
+            _context.Entry(entity).State = EntityState.Modified;
+
             _dbSet.Remove(entity);
             if (saveChanges)
                 Save();

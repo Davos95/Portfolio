@@ -76,7 +76,6 @@ namespace ProyectoFotoCore3.Controllers
             }
         }
 
-        
         public int GetNumPhotos()
         {
 
@@ -102,7 +101,28 @@ namespace ProyectoFotoCore3.Controllers
 
                 return Json(new { success = true, message = "Ha ocurrido un error, por favor vuelve a intentarlo" });
             }
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> DeleteFotos(string IdFotos)
+        {
+            try
+            {
+                var listId = new List<int>();
+                var ids = IdFotos.Split(',');
+                foreach (var id in ids)
+                {
+                    listId.Add(int.Parse(id));
+                }
+
+                await _serviceFoto.DeleteElements(listId);
+
+                return Json(new { success = true, message = "Se ha ordenado correctamente" });
+            }
+            catch(Exception ex)
+            {
+                return Json(new { success = true, message = "Ha ocurrido un error, por favor vuelve a intentarlo" });
+            }
         }
 
         public IActionResult PreviewImage(int id)

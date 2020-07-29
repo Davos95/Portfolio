@@ -17,8 +17,8 @@ namespace ProyectoFotoCore3.Services.Interfaces
 
         void AddElement(Foto element, bool save = true);
         void UpdateElement(Foto element);
-        void DeleteElement(int id);
-        
+        Task DeleteElement(int id, bool save = true);
+        Task DeleteElements(List<int> ids);
         int GetNum();
         int GetNumFotosBySesion(int IdSesion);
 

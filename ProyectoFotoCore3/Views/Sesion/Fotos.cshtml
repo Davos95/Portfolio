@@ -11,11 +11,12 @@
         width: 250px;
     }
 </style>
-<div style="display:flex; justify-content:space-between;">
+<div class="flex flex--space-between">
     <div>
         <h2>@Model.Nombre</h2>
     </div>
-    <div>
+    <div class="flex flex--space-between">
+        <button class="btn waves-effect waves-darken red" id="delete">Eliminar</button>
         <button class="btn waves-effect waves-darken green" id="order">Ordenar</button>
     </div>
 </div>
@@ -41,7 +42,11 @@
                                         {
                                             <i id="preview_@foto.Id" class="material-icons icon-white">star_border</i>
                                         }
-                                        <i class="material-icons icon-white">check_box_outline_blank</i>
+                                        <label for="check_@foto.Id">
+                                            <input type="checkbox" name="check_@foto.Id" id="check_@foto.Id" />
+                                            <i class="material-icons icon-white" id="iconCheck_@foto.Id">check_box_outline_blank</i>
+                                        </label>
+
                                         <i class="material-icons icon-red">favorite_border</i>
 
                                     </div>
@@ -124,17 +129,8 @@
 
 
             $("#order").click(async function () {
-                var array = new Array();
+                var formData = CreateFormData();
 
-                $(".image-card").each(function () {
-                    array.push($(this).attr("id"));
-                });
-                var idSesion = $("#IdSesion").val();
-
-                var formData = new FormData();
-                formData.append("IdFotos", array);
-                formData.append("IdSesion", idSesion);
-                console.log(array);
                 var response = await $.ajax({
                     url: "@Url.Action("Ordenar","Foto")",
                     type: "POST",
@@ -148,7 +144,42 @@
 
             });
 
+            $("#delete").click(async function () {
+                var idSesion = $("#IdSesion").val();
+                var array = new Array();
 
+                $.each($("[name^='check_']:checked"), function () {
+                    array.push($(this)[0].name.split('_')[1]);
+                });
+
+                var formData = new FormData();
+                formData.append("IdFotos", array);
+                formData.append("IdSesion", idSesion);
+
+                var response = await $.ajax({
+                    url: "@Url.Action("DeleteFotos", "Foto")",
+                    type: "POST",
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    success: function (response) {
+                        alert("Success");
+                    }
+                });
+
+            });
+
+            $("[name^='check_']").change(function () {
+                var id = $(this)[0].name.split("_")[1];
+                var completeId = $(this)[0].id;
+
+                if ($("#" + completeId).prop("checked")) {
+                    $("#iconCheck_" + id).text("check_box");
+                } else {
+                    $("#iconCheck_" + id).text("check_box_outline_blank");
+                }
+
+            });
 
             $("[id^='preview_']").click(async function () {
 
@@ -164,6 +195,22 @@
             });
 
         });
+
+        function CreateFormData() {
+            var array = new Array();
+
+            $(".image-card").each(function () {
+                array.push($(this).attr("id"));
+            });
+            var idSesion = $("#IdSesion").val();
+
+            var formData = new FormData();
+            formData.append("IdFotos", array);
+            formData.append("IdSesion", idSesion);
+            console.log(array);
+
+            return formData;
+        }
 
         async function PreviewPhoto(id) {
             var json = { "id": id };

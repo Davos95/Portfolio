@@ -239,6 +239,11 @@ main {
 .width-100 {
   width: 100%; }
 
+.flex {
+  display: flex; }
+  .flex--space-between {
+    justify-content: space-between; }
+
 #photos1 {
   padding: 1em;
   /* Prevent vertical gaps */

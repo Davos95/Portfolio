@@ -45,8 +45,9 @@ namespace ProyectoFotoCore3.ServiceAgents.AzureBlobStorage
         {
             CloudBlobContainer container = this.client.GetContainerReference(nombreContenedor);
             CloudBlockBlob blob = container.GetBlockBlobReference(nombreblob);
-            await blob.DeleteIfExistsAsync();
-            return true;
+            var flag = await blob.DeleteIfExistsAsync();
+
+            return flag;
         }
 
         public async Task<List<AzureBlobItem>> GetBlobItems( String nombreContenedor)

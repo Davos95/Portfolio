@@ -30,12 +30,30 @@ namespace ProyectoFotoCore3.Services.Services
             _repositoryFoto.AddElement(element, save);
         }
 
-        public void DeleteElement(int id)
+        public async Task DeleteElement(int id, bool save = true)
         {
-            var sesion = _repositoryFoto.GetById(id);
-
-            _repositoryFoto.DeleteElement(sesion);
+            var foto = _repositoryFoto.GetById(id);
+            var nombreFoto = foto.UriAzure.Split('/').Last();
+            
+            var flag = await _azureBlobStorage.EliminarBlob($"sesion{foto.IdSesion}",nombreFoto);
+            _repositoryFoto.DeleteElement(foto, save);
         }
+
+        public async Task DeleteElements(List<int> ids)
+        {
+            if (ids.Any())
+            {
+                CheckFotoPreview(ids);
+                foreach (var id in ids)
+                {
+                    await this.DeleteElement(id, false);
+                }
+
+                _repositoryFoto.Save();
+            }
+        }
+
+
 
         public Foto GetElementById(int id)
         {
@@ -107,6 +125,18 @@ namespace ProyectoFotoCore3.Services.Services
             }
 
             _repositoryFoto.Save();
+        }
+
+        private void CheckFotoPreview(List<int> ids)
+        {
+            var id = ids.First();
+            var foto = this.GetElementById(id);
+            var sesion = _serviceSesion.GetElementById(foto.IdSesion);
+            if (sesion.IdFotoPreview != null && ids.Contains(sesion.IdFotoPreview.Value))
+            {
+                sesion.IdFotoPreview = null;
+                _serviceSesion.UpdateElement(sesion);
+            }
         }
     }
 }

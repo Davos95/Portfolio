@@ -61,7 +61,6 @@
 
 
     async function AJAXSubmit(oFormElement) {
-        debugger;
         var resultElement = oFormElement.elements.namedItem("result");
         const formData = new FormData(oFormElement);
 
@@ -72,7 +71,6 @@
             });
 
             if (response.ok) {
-                debugger;
                 var num = await SendForm("@Url.Action("GetNumPhotos", "Foto")", "GET");
                 $("#numFotos").text(num);
                 $(".modal").modal("close");        
