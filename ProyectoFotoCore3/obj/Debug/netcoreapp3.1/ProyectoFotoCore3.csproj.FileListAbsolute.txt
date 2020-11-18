@@ -448,3 +448,4 @@ G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Sesion\Fotos.cshtml.g.cs
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.dll
 G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\bin\Debug\netcoreapp3.1\ProyectoFotoCore3.ServiceAgents.AzureBlobStorage.pdb
+G:\Proyectos\ProyectoFotoCore3\Portfolio\ProyectoFotoCore3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Menu.cshtml.g.cs

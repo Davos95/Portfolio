@@ -42,7 +42,7 @@
                                         {
                                             <i id="preview_@foto.Id" class="material-icons icon-white">star_border</i>
                                         }
-                                        <label for="check_@foto.Id">
+                                        <label id="label_@foto.Id" for="check_@foto.Id">
                                             <input type="checkbox" name="check_@foto.Id" id="check_@foto.Id" />
                                             <i class="material-icons icon-white" id="iconCheck_@foto.Id">check_box_outline_blank</i>
                                         </label>
@@ -101,28 +101,38 @@
                 }
             }).on("drop", function (e) {
                 e.preventDefault();
+
                 var destino = $(this).attr('id');
 
-                console.log(origen);
-                console.log(destino);
+                console.log("origen: ", origen);
+                console.log("destino: ", destino);
 
-                /*Intercambio de imagenes*/
-                var origenImg = $("#" + origen + " img").attr('src');
-                var destinoImg = $("#" + destino + " img").attr('src');
+                
 
-                $("#" + origen + " img").attr('src', destinoImg);
-                $("#" + destino + " img").attr('src', origenImg);
-
+                /* Intercambio de imagenes */
+                ChangeAttr("#"+origen+" img", "#"+destino+" img", 'src');
 
                 /* Intercambio de Ids */
-                var origenIdImg = $("#" + origen).attr('id');
-                var destinoIdImg = $("#" + destino).attr('id');
+                ChangeAttr("#" + origen, "#" + destino, 'id');
 
-                $("#" + origen).attr('id', destinoIdImg);
-                $("#" + destino).attr('id', origenIdImg);
+                /* Intercambio de estrellita */
+                ChangeText("#preview_"+origen, "#preview_" +destino); 
+                ChangeAttr("#preview_" + origen, "#preview_" + destino, 'id');
+
+                ///* Intercambio de checkbox */
+                ChangeProps("#check_" + origen, "#check_" + destino, "checked");
+
+                ChangeAttr("#check_" + origen, "#check_" + destino, 'name');
+                ChangeAttr("#check_" + origen, "#check_" + destino, 'id');
+
+                ChangeAttr("#label_" + origen, "#label_" + destino, 'for');
+                ChangeAttr("#label_" + origen, "#label_" + destino, 'id');
+
+                ChangeAttr("#iconCheck_" + origen, "#iconCheck_" + destino, 'id');
+                ChangeIconCheckBox("#check_" + origen);
+                ChangeIconCheckBox("#check_" + destino);
 
                 $grid.masonry('layout');
-
                 flagImg = true;
             });
 
@@ -170,15 +180,9 @@
             });
 
             $("[name^='check_']").change(function () {
-                var id = $(this)[0].name.split("_")[1];
-                var completeId = $(this)[0].id;
+                var name = $(this)[0].name;
 
-                if ($("#" + completeId).prop("checked")) {
-                    $("#iconCheck_" + id).text("check_box");
-                } else {
-                    $("#iconCheck_" + id).text("check_box_outline_blank");
-                }
-
+                ChangeIconCheckBox("[name="+name+"]");
             });
 
             $("[id^='preview_']").click(async function () {
@@ -195,6 +199,70 @@
             });
 
         });
+
+        function ChangeAttr(selectorOrigen, selectorDestino, attr) {
+            var origenImg = $(selectorOrigen).attr(attr);
+            var destinoImg = $(selectorDestino).attr(attr);
+
+            var elementoOrigen = $(selectorOrigen);
+            var elementoDestino = $(selectorDestino);
+
+            $(elementoOrigen).attr(attr, destinoImg);
+            $(elementoDestino).attr(attr, origenImg);
+        }
+
+        function ChangeText(selectorOrigen, selectorDestino) {
+            var origenImg = $(selectorOrigen).text();
+            var destinoImg = $(selectorDestino).text();
+
+            var elementoOrigen = $(selectorOrigen);
+            var elementoDestino = $(selectorDestino);
+
+            $(elementoDestino).text(origenImg);
+            $(elementoOrigen).text(destinoImg);
+            
+        }
+
+        function ChangeProps(selectorOrigen, selectorDestino, prop) {
+            var origenImg = $(selectorOrigen).prop(prop);
+            var destinoImg = $(selectorDestino).prop(prop);
+
+            var elementoOrigen = $(selectorOrigen);
+            var elementoDestino = $(selectorDestino);
+
+            $(elementoDestino).prop(prop, origenImg);
+            $(elementoOrigen).prop(prop, destinoImg);
+            
+        }
+
+        function ChangeIconCheckBox(idCheckBox) {
+            var element = $(idCheckBox)[0];
+            var id = element.name.split("_")[1];
+            var completeId = element.id;
+
+            if ($("#" + completeId).prop("checked")) {
+                $("#iconCheck_" + id).text("check_box");
+            } else {
+                $("#iconCheck_" + id).text("check_box_outline_blank");
+            }
+        }
+
+        function ChangeName(selectorOrigen, selectorDestino) {
+            var origenImg = $(selectorOrigen)[0].name;
+            var destinoImg = $(selectorDestino)[0].name;
+
+            $(selectorDestino)[0].name = origenImg;
+            $(selectorOrigen)[0].name = destinoImg;
+            
+        }
+
+        function ChangeFor(selectorOrigen, selectorDestino) {
+            var origenImg = $(selectorOrigen)[0].for;
+            var destinoImg = $(selectorDestino)[0].for;
+
+            $(selectorOrigen)[0].for = destinoImg;
+            $(selectorDestino)[0].for = origenImg;
+        }
 
         function CreateFormData() {
             var array = new Array();
@@ -218,6 +286,9 @@
             return bool;
 
         }
+
+
+
     </script>
 
 }
