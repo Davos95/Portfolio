@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProyectoFotoCore3.Models;
@@ -12,6 +13,7 @@ using ProyectoFotoCore3.Services.Interfaces;
 
 namespace ProyectoFotoCore3.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {        
         private readonly IServiceUsuario _serviceUser;

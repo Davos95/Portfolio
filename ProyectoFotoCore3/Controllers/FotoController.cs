@@ -28,6 +28,7 @@ namespace ProyectoFotoCore3.Controllers
             _serviceSesion = serviceSesion;
             _serviceFoto = serviceFoto;
         }
+
         public IActionResult Index()
         {
             return View();

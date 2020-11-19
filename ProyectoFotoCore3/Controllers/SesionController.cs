@@ -45,6 +45,7 @@ namespace ProyectoFotoCore3.Controllers
 
             return PartialView("_Sessions", vmo);
         }
+
         public IActionResult Create()
         {
             var vmo = new SesionVMO();
