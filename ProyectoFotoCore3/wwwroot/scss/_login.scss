@@ -48,3 +48,7 @@ form.user {
 .btn-facebook {
   @include button-variant($brand-facebook, $white);
 }
+
+.card-login-content {
+    width: 35em;
+}

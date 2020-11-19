@@ -5,46 +5,51 @@
     Layout = "";
 }
 <!DOCTYPE html>
-<html>
+<html lang="es-es">
 <head>
     <title>Login</title>
 
-    <link href="~/css/materialize.min.css" rel="stylesheet" />
     <link href="~/css/application.css" rel="stylesheet" />
     <link href="~/css/login/login.css" rel="stylesheet" />
 </head>
-<body>
-    <main>
-        <div class="row">
-            <div class="col s12" style="text-align:center">
-                <h1>Picture Manager</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card-login col s3 login-center">
-                <h3>Login</h3>
-                <div class="card">
-                    <div class="card-content">
-                        @using (Html.BeginForm())
-                        {
-                            <div class="input-field">
-                                @Html.TextBoxFor(x => x.Nickname, new { @class = "", id = "nick" })
-                                <label for="nick"><i class="material-icons"></i>Nickname</label>
+<body class="bg-gradient-primary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0 card-login-content">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Bienvenido al panel de administración</h1>
+                                </div>
+                                <form class="user" asp-controller="Login" asp-action="Index" method="post">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input asp-for="Nickname" type="text" class="form-control form-control-user" placeholder="Escribe tu nombre de usuario">
+                                        @Html.ValidationMessageFor(x => x.Nickname)
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Contraseña</label>
+                                        <input asp-for="Password" type="password" class="form-control form-control-user" placeholder="Escribe tu contraseña">
+                                        @Html.ValidationMessageFor(x => x.Password)
+                                    </div>
+                                    <span class="text-danger">@ViewData["ErrorLogin"]</span>
+                                    <button type="submit"  class="btn btn-primary btn-user btn-block"> Entrar </button>
+                                </form>
                             </div>
-                            <div class="input-field">
-                                @Html.TextBoxFor(x => x.Password, new { @class = "", id = "password", type = "password" })
-                                <label for="password"><i class="material-icons"></i>Password</label>
-                            </div>
-                            <div class="input-field">
-                                <button type="submit" class="btn green waves waves-effect waves-darken btn-width-100 btn-pictureManager">ENTRAR</button>
-                            </div>
-                        }
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <script src="~/js/materialize.js"></script>
+
+
+
+
 </body>
 </html>

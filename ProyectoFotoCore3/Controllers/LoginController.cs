@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ProyectoFotoCore3.Models.Entities.User.Model;
 using ProyectoFotoCore3.Services.Interfaces;
 
@@ -29,21 +30,22 @@ namespace ProyectoFotoCore3.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(LoginVMO vmo)
         {
-            var model = _serviceUsuario.Login(vmo.Nickname, vmo.Password);
-            if (model != null)
+            if (ModelState.IsValid)
             {
-                var claims = new List<Claim>
+                var model = _serviceUsuario.Login(vmo.Nickname, vmo.Password);
+                if (model != null)
                 {
-                    new Claim(ClaimTypes.Name, model.Nombre),
-                    new Claim(ClaimTypes.Role, "Administrator")
-                };
-                var claimsIdentity = new ClaimsIdentity(claims, "User");
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    var claims = new List<Claim> { new Claim(ClaimTypes.Name, model.Nombre), new Claim(ClaimTypes.Role, "Administrator") };
+                    var claimsIdentity = new ClaimsIdentity(claims, "User");
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
+                }
+
+                ViewData["ErrorLogin"] = "Usuario/Contraseña incorrecta";
             }
 
-            return Json(new { success = false });
+            return View(vmo);
         }
     }
 }
